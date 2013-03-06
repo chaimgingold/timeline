@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<style>
+
+	.queryResult
+	{
+		font:12px helvetica,sans-serif;
+
+		display: inline-block;
+	}
+
+	.queryInput
+	{
+		font:12px helvetica,sans-serif;
+		
+		display: inline-block;
+	}
+	
+</style>
+
+
+<!-- Query field -->
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+
+
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="js/paper.js"></script>
+
+<!-- other helpers -->
+<script type="text/javascript" src="js/CSVToArray.js"></script>
+
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" src="js/timeline.js" canvas="myCanvas">
+</script>
+</head>
+
+
+<body>  
+
+
+	<div class="inputbar">
+		<input class="queryInput" type="text" name="query" id="query" value="" autocomplete="off" autofocus>
+		<div class="queryResult" id="queryResult"></div>
+	</div>
+
+    <canvas id="myCanvas" width="1624" height="1624"></canvas>
+</body>
+ 
+</html>

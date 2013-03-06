@@ -1,0 +1,778 @@
+# TODO:
+# Robert Taylor needs adding...
+, Np complete
+, Electronic IRS blocked
+
+LCD display
+Color tv
+
+
+, RAND War Games
+
+, War Games, tag:film
+
+
+
+#		Other theory
+
+1945, As We May Think, author:Bush, tag:popular-text, size:3
+1962, 'Augmenting human intellect', tag:academic-text, tag:engelbart
+1950, Turing Test, title:Computing Machinery and Intelligence, tag:Turing, tag:academic-text
+
+1968, 'Computer as Communication Device', tag:Licklider, tag:academic-text
+1960, 'Man-Computer Symbiosis', tag:Licklider, tag:academic-text
+1963, 'Inter. Comp. Net.', tag:Licklider, tag:policy-text, Members  and Affiliates  of the Intergalactic Computer Network 
+
+1951.12, 'Chemical Basis of Morphogenesis', tag:Turing, tag:academic-text
+
+1951, 'Duplex Theory of Pitch Perception', tag:paper, author:Licklider, tag:academic-text
+1972, 'What Computers Can't Do', tag:academic-text, tag:dreyfus
+
+1964, 'computer utility', (see greenberger in Atlantic monthly) killed by falling hardware prices (IC!) and software failures
+
+1964, 'Understanding Media', tag:mcluhan
+
+
+
+#		Game Theory, Simulation and so on...
+
+1928, 'On the Theory of Parlor Games', "Zur Theorie der Gesellschaftsspiele"., tag:Neumann, tag:academic-text
+1944, Theory of games and economic behavior, tag:Neumann, tag:academic-text, size:3
+1960, 'Strategy of Conflict', tag:academic-text
+1966, Theory of self-reproducing automata, tag:Neumann, tag:academic-text, size:3
+1970, Game of Life, Gardner article on Conway's game (re: von Neumann), tag:academic-text, size:3
+1969, 'Calculating Space', (translated for Project MAC in 1970), Konrad Zuse, tag:academic-text
+1976, On numbers and games, Conway book, tag:academic-text
+, Actual lab mice in mazes as lab experiments (10 print)
+1986, 'Vehicles', tag:academic-text
+2002, A new kind of science, tag:academic-text
+
+
+#		Non-digital play (noteworthy to us)
+
+1969, Exploratorium
+1978, Berkeley Adv. Playground
+1951, 'Junk Playgrounds', tag:popular-text, 1931 is first proposed, 1940 Endrup is built
+1973, New Games Tournament, (book 1976, de Koven & more)
+#, dekoven game farm
+1978, The Well-Played Game, tag:dekoven, tag:popular-text
+1962, Fluxus
+
+1979, MIT Blackjack Team, see earlier Thorp and Shannon work...; doesn't actually seem to be tech and Bringing Down the House book W article claims it is in part fantasy (the gadgetry related part and mmore).
+1978, Eudaemons, tag:UCSC, roulette cheating with computerized system; inspired by Thorp & Shannon., tag:cheat
+1961, Shannon/Thorp roulette hack, tag:computer, tag:cheat, tag:shannon
+
+
+#		AI & games
+
+1951, Checkers & Chess, tag:game, tag:ai, tag:Stratchey, tag:Prinz, c:W, on:Ferranti Mark 1
+1952, Samuels's Checkers AI, tag:ibm, tag:samuels, tag:game, publication date is 59. was involved in a sales demo somehow. (W is source for 52 date).
+
+1949, 'Programming a Computer for Playing Chess', tag:Shannon, tag:academic-text, tag:ai, tag:chess
+1959-1962, Kotok-McCarthy chess AI, tag:game, tag:ai
+1948-1950, Turbochamp, tag:Turing, tag:Champernowne, tag:game, tag:ai, theoretical; it's a design that wasn't executed on a machine, tag:chess
+
+1953, Hex, tag:shannon, tag:game, tag:computer, tag:ai, see Computers and Automata
+1953.3.18, A Mind Reading (?) Machine, tag:shannon, tag:at&t bell, tag:game theory, tag:game, tag:ai
+
+1996-1997, Deep Blue v. Kasparov, tag:ibm, tag:chess, tag:ai
+1942, Karl Zuse Chess program, tag:chess, purely theoretical to demonstrate Plankalkul language he had designed. like turbochamp., tag:ai, tag:game, tag:chess
+
+
+
+# AI/Cog Sci broadly
+
+1955, Logic Theorist, tag:ai, tag:simon, tag:newell, tag:shaw, tag:program
+1956.8.10, Dartmouth AI Conf., tag:mccarthy, tag:minsky, tag:shannon, tag:samuel, tag:newell, tag:simon, coined 'art. int.', tag:conf
+1956, 'automata studies', Shannon Von McCarthy, tag:academic-text
+1957, 'Synctactic Structures', Chomsky, tag:academic-text
+1982, UCSD cog sci dept., McGill
+
+1947, Whirlwind designed, tag:Forrestor, tag:MIT, tag:computer, designed on this date initially
+#1946, Whirlwind begins, (eventually includes 1st CRT use??), tag:computer
+1951, Whirlwind online, tag:whirlwind, tag:Forrestor, tag:MIT, tag:computer
+1959, SAGE operational, tag:war, tag:ibm, tag:whirlwind, tag:sage, tag:computer
+
+
+
+
+
+1947, 'Information Systems of Inter-connected Digital Computers', forrestor and Crawford and Everett, tag:academic-text
+1953, Core memory, (whirlwind), tag:MIT
+1952.5, Memory Test Computer, (whirlwind clone for core memory dev), tag:MIT, tag:computer
+
+1951, The Preparation of Programs, tag:academic-text
+1957.4, Fortran, (released), tag:language, tag:program
+1959-1960, 'software', tag:term
+1960, COBOL, (CODASYL committee year before), tag:language
+1971, Pascal, tag:language
+
+1972, C, tag:thompson, tag:Ritchie, tag:at&t, tag:unix, c:W, developed so they could port unix from pdp-7 to pdp-11, 1973 unix rewritten in C, tag:language, on:pdp-11
+
+1971, 1st UNIX dist., tag:game, tag:os, tag:unix, blackjack (bj), tic tac toe (ttt), moo (moo), and chess (chess) (among other games) (games described in '71 man pages, "man71" "User-maintained software"
+	#1971, bj, tag:unix, tag:game, tag:thompson
+	#1971, moo, tag:unix, tag:game, tag:thompson
+	#1971, chess, tag:unix, tag:game, tag:thompson
+	#1971, ttt, tag:unix, tag:game, tag:thompson
+
+1969, UNIX, link to multics, tag:at&t, tag:os, on:pdp-7, tag:thomspon, tag:ritchie, note that r&t want the 'fellowship' they had on multics as well as the computer. they had computers. timeshare community as a virus spreading from mit.,
+
+1977, BSD, tag:OS, tag:unix, tag:Joy, tag:Thomson
+1991.10.5, Linux, tag:os, tag:unix
+1964, Multics begins, utility ideology/availability continues into Multics, unix, and Linux... Open source predates software as a product... IBM user groups eg, tag:os, on:ge-645, tag:mit, tag:corbato
+1961.11, CTSS, tag:MIT, time sharing, tag:MAC, (demo'd in 1961), tag:os, tag:corbato
+1963, ITS, tag:MIT, tag:pdp-6, tag:pdp-10, tag:time sharing, tag:os, date must be >63 as it was on a pdp-6 and was when project mac split from minsky's ai group (written by latter); i think steven levy hackers has more info on it. waldrop is fuzzy on details.
+
+#1968, IBM unbundling
+
+1963, SAGE fully deployed, tag:ibm
+
+
+1944, Reservisor
+1952, Magnetronic Reservisor, line:flight
+1954, IBM-AA report, tag:ibm
+1955-1959, punched card Reservisor brought online, tag:ibm
+1957, SABRE begins, tag:ibm
+1960-1963, SABRE installed, tag:ibm
+1964, SABRE done, tag:ibm
+
+1974, Grocery UPC, (w IBM & McKinsey)
+
+
+1957.10, Sputnik & ARPA, size:3, tag:politics
+1972, ARPA becomes DARPA, (first time; becvomes arpa in 93, then darpa in 96 according to W).
+1970, Mansfield amendment, size:3, tag:politics
+2000, DMCA
+2000, NSRL, date unclear
+
+
+
+1978, WordStar, tag:program
+
+1964, DTSS, (alongside Basic) Aspray: 3rd class of computer users, neither end users or techies
+1959, Stratchey time share proposal
+
+1946, ARD, (1st VC for WWII tech)
+
+1969, Gates learns Basic on HS timeshare
+
+1977, Commodore PET, tag:computer
+1977.8, TRS-80, tag:computer
+1981, IBM PC, tag:computer
+
+1963, SRI Engelbart (IPTO funded)
+1975, SRI ARC contract terminated, tag:lick, tag:sri, tag:engelbart, tag:arpa
+
+1969, 'Reactive Engine', tag:academic-text, tag:kay
+1970, PARC, Taylor from IPTO heads cs div, tag:parc, tag:xerox
+1973, Alto, (research project), tag:parc, tag:computer, tag:xerox
+1981, Xerox Star, (released), tag:computer, tag:parc, tag:xerox
+1971, SmallTalk, tag:parc, tag:language, tag:hci, tag:kay, tag:goldberg, tag:xerox
+1973-1974, Ethernet, tag:net, tag:parc, tag:internet
+1980, Open Ethernet, tag:parc, tag:intel, tag:dec
+
+1974, Bravo, tag:Simonyi, tag:xerox, tag:parc, tag:alto, tag:lampson, alto text edit
+, Markup, tag:xerox, tag:parc, tag:alto, paint program
+, Draw, tag:xerox, tag:parc, tag:alto, draw program
+
+1973, Laser printer, (research deployment), tag:xerox, tag:parc
+1958, Xerox 914, first modern photocopier, tag:xerox
+1906, Xerox, tag:xerox, tag:company
+
+
+1962.10.1-1964, Licklider heads IPTO, (Arpa IPTO; funds Stanford, utah MIT, CMU) (
+
+1964-1966, Sutherland heads IPTO
+1966-1968, Taylor heads IPTO, (later Parc cs)
+1975, Heilmeier heads ARPA
+1981, MOSIS, tag:arpa, tag:chip, tag:research
+
+
+1982, Sun, tag:joy, tag:Workstation, tag:bsd, tag:unix, inspired by alto?
+1981, SGI, tag:jim clark, tag:Workstation, tag:unix,tag:company
+
+
+
+
+, Jobs joins Mac project
+, Kay joins Atari
+, Kay joins Apple
+, Kay joins Xerox
+
+1990.5.22, Windows 3, tag:MS
+1975, MS, tag:company
+1983, MS Word, tag:simonyi, tag:ms, inspired from bravo
+
+
+
+###				Prehistory
+
+, Babbage
+, Ada Lovelace
+, Typewriter
+, English telegram network linearized
+
+
+1890, US census uses Hollerith machines, cite:Aspray
+1834, Babbage pitches Analytical Engine, cite:Aspray
+1830, Check clearing house, date ish, cite:Aspray
+
+
+1937, 'On Computable Numbers', (Turing machine), tag:academic-text
+1946, ACE Report, tag:turing, tag:academic-text
+1950, Pilot ACE, tag:computer
+
+1954.5.8, Turing dies
+1957.2.8, von Neumann dies
+
+
+
+##		literature, art, stuff
+
+1954, Strachey generator, 'The 'Thinking' Machine' is article about love letter generator
+1960, CBS Western, 'The Thinking Machine', TX-0 (why 1956 photo at computer history museum?)
+1968, Switched on Bach, tag:music
+1970, Software exhibit, tag:Nelson, tag:Negroponte
+1956, SAGE pinup, tag:SAGE, tag:play
+
+
+#
+
+1969, Apollo, (moon landing), size:3
+1945, WWII ends, tag:war, size:3, tag:politics
+1939, WWII, tag:war, size:3, tag:politics
+1945.7.16, Trinity test, tag:war, tag:politics
+#1949, Soviet Atomic Test
+1949.8, US confirms Russian A-Bomb, tag:politics
+1950, Valley Report, tag:SAGE, (reaction to soviet atomic test), convened 1949.12, tag:whirlwind, tag:lincoln lab
+1955, Vietnam War Begins, tag:politics, tag:war
+1948-1949, Berlin Air Lift, tag:politics
+1961.8, Berlin Wall, tag:politics
+1989, Berlin Wall falls, tag:politics
+1962.10, Cuban Missile Crisis, tag:politics
+1964, Tonkin Resolution, tag:politics
+1975, Vietnam War Ends, tag:politics
+
+
+1956, Forrestor joins Sloan School, tag:mit, tag:forrestor
+1961, Industrial Dynamics, tag:Forrestor, tag:academic-text, tag:mit
+1971, World Dynamics, tag:Forrestor, tag:academic-text, tag:mit
+1969, Urban Dynamics, tag:Forrestor, tag:academic-text, tag:mit
+
+
+
+
+
+###				Early Computers
+
+1939, Bombe, tag:Turing, tag:crypto, tag:war, tag:computer
+1943.12, Colossus Mark 1, tag:crypto, tag:war, tag:computer, tag:stored program, tag:digital, tag:electronic, tag:Tommy Flowers
+1944.6.1, Colossus Mark 2, tag:crypto, tag:war, tag:computer, tag:stored program, tag:digital, tag:electronic, tag:Tommy Flowers
+
+1928-1931, Differential Analyzer, tag:computer, tag:bush, tag:shannon
+
+1938, Z1, who:Zuse, tag:computer
+1941, Z3 & Z4, who:Zuse, (Turing complete; Z4 is commercial), cite:W, tag:computer
+
+1937-1943, Harvard Mark 1, (made by IBM), Aiken (electromechanical). No branches, physical loops of instruction tape., cite:Aspray, tag:computer, tag:ibm
+1939, Complex Computer, AT&T stibitz complex numbers, tag:computer
+1939, ABC, cite:Aspray, tag:computer, Atsanoff-Berry Computer (Iowa physicist)f
+1945, ENIAC, (online; electric, no stored programs, patched). Moore school., cite:Aspray, tag:computer
+1949, EDSAC, (online; English edvac machine; first stored program computer but for colossus), cite:Aspray, tag:computer
+1952, JOHNNIAC, tag:RAND, tag:computer
+1952, IAS Machine, tag:Neumann, tag:computer
+
+1963.5, JOSS, tag:language, on:johnniac, tag:rand
+1964, RAND Tablet, tag:arpa, tag:rand, see RAND doc; looks like a wacom tablet precisely in diagram with a computer!, tag:hci
+1969, Grail, tag:rand, tag:arpa, tag:rand, tag:rand tablet, on:ibm360, tag:hci, tag:language, was actually a programming language too and prefigured in hci terms many later direct manip developments down to the detail (lower right resizing, eg).
+1980, 'Put-That-There', tag:academic-text, tag:program, tag:hci, tag:mit, richard a bolt, 1979 is spatial data mangement darpa report
+
+1945, EDVAC report, (Von Neumann, w Moore school), cite:Aspray, tag:academic-text, size:3, draws upon mcculloch pitts, turing's work (though not cited), and eniac, and E&M are also unattributed authors we think, too. (waldrop claims shannon also influenced it i think).
+1946, ‘Logical Design of Computing’, tag:Burks, tag:goldstine, tag:neumann, tag:academic-text
+1937, 'A Symbolic Analysis of Relay and Switching Circuits', tag:Shannon, ms thesis, tag:academic-text
+1948, 'A Mathematical Theory of Communication', tag:shannon, tag:academic-text
+1945, 'A Mathematical Theory of Cryptography', tag:shannon, tag:academic-text, was secret, in Kahn, the Codebreakers (from W) Shannon reputedly says that insight into crypto and info theory were inseperable.
+1948, 'Data smoothing and prediction in fire-control systems', (Wikipedia says 45; check with his collected works), tag:shannon, more authors, tag:academic-text
+1942, 'Extrapolation Interpolation and Smoothing of Stationary Time Series', tag:weiner, tag:cybernetics, tag:academic-text
+1948, 'Cybernetics: Or Control and Communication in the Animal and the Machine', tag:weiner, tag:cybernetics, tag:academic-text
+
+, EMCC founded, tag:EMCC
+1949, BINAC, (EMCC machine, edvac inspired), cite:Aspray, tag:computer, tag:EMCC
+1951, EDVAC operational, cite:W, tag:computer
+1951, Ferranti Mark 1, cite:Aspray, tag:computer
+1951, UNIVAC, (Moore engineers' startup offshoot) , electronic control company, edvac inspired machine for US census, magnetic tape, cite:Aspray, tag:computer, tag:EMCC
+1951.3, US Census takes Univac 1
+1952, UNIVAC predicts Eisenhower win, cite:Aspray, tag:EMCC
+
+1952, IBM 701, tag:computer, tag:ibm, aka Defense Calculator, tag:36bit, release date correct? it's announce date, c:W
+1955, IBM 702, cite:Aspray, tag:computer, tag:ibm
+1953, IBM 650, tag:computer, tag:ibm, c:W, announce date
+
+1957, CDC founded, need various releases (as appropriate to NLS, other users), tag:company, tag:founding
+1961, SDS, (relates to Berkeley, NLS, Community Memory Terminal), tag:Palvesky, tag:company, tag:founding
+ 
+1955, TX-0, tag:MIT, tag:computer, tag:Clark, (I think Clark), tag:LincolnLab, tag:olsen, link to whirlwind
+1958, TX-2, tag:MIT, tag:computer, tag:LincolnLab
+1957, DEC, tag:dec
+1998, Compaq buys DEC
+1959, PDP-1, tag:tech, spinoff from TX line (TX-0), tag:computer, size:3, tag:dec, tag:minicomp
+1963, PDP-6, tag:computer, precursor to pdp-10, tag:36bit
+1965, PDP-8, tag:computer, tag:dec, tag:minicomp, tag:12bit, tag:de Castro, size:3
+#, PDP-6, tag:36bit, tag:computer
+1966, PDP-10, tag:tech, tag:computer, tag:dec, tag:minicomp, tag:36bit, inherits from pdp-6
+1969, Nova, tag:minicomp, tag:16bit, Data General, tag:de Castro, tag:computer
+1970, PDP-11, tag:16bit, tag:dec, tag:computer
+
+1976, CP/M, & BIOS, tag:kildall, kildall inspired by dec, informs msdos and ibm pc
+
+1961, IBM 1401, chain printer; finally replaced card punches; RPG, cite:Aspray, tag:computer, tag:ibm
+1962, IBM NPL project begins, (becomes System/360), cite:Aspray, tag:ibm
+1965, System/360, tag:ibm, tag:computer
+1963, Honeywell 200, (1401 compatible, faster and cheaper), cite:Aspray, tag:computer
+
+1964-1967, Berkeley Time Sharing System
+
+1969, ATM
+ 
+
+
+###				Games
+
+# companies
+1971, Atari
+1982.5.28, EA
+# Can a computer make you cry ad?
+
+
+# networked
+1973, Maze War, tag:NASA, tag:game, tag:imlac, then lebling brought to MIT (ask nick, in 10print)-nick seems to be using this resource, were high school interns at NASA (Colley, Thompson, and Howard); c:digibarn Colley memory. 1974 is MIT version, which is >2 players., tag:multiplayer
+#1974, Maze War, tag:MAC, tag:game, tag:net, link:http://www.digibarn.com/collections/games/xerox-maze-war/index.html, tag:multiplayer, tag:3d
+1978, MUD1, tag:PDP-10, tag:game, tag:net, tag:multiplayer
+1986, Habitat, tag:game, tag:net, tag:multiplayer
+1990, LambdaMOO, (first moo?), tag:game, tag, tag:net, tag:multiplayer
+1997, Ultima Online, tag:game, tag:net, tag:multiplayer
+
+1968, Civil War, tag:game, written by 3 highschool students, c:101
+1969, Lunar Lander (text), tag:game, aka: Rocket, Lunar, LEM, and Apollo. c:W, on:pdp-8
+1973, Lunar Lander, tag:game, on:gt40, commissioned by DEC for a trade show demos.
+1979, Lunar Lander (atari), tag:game, tag:atari, tag:arcade, chip:6502
+1971, Star Trek, tag:game
+1979, Alto Trek 2.1, tag:game, on:alto, v1 date totally unclear v2.1 is 1979 according to docs, tag:multiplayer
+1978, Pinball, tag:game, on:alto, date based on high res screenshot looks like XVIII
+1969, Space Travel, tag:unix, tag:thompson, tag:multics, tag:fortran, on:pdp-7, tag:game
+
+1948, CRT Amusement Device, tag:game, not on a proper computer, it's purely electronic like Pong
+1951, NIM, on:NIMROD, tag:game, tag:Ferranti
+1961, Kalah, on:pdp-1, tag:dec, tag:BBN, tag:Roland Silver
+
+
+1960, Cubic, tag:game, on:tx-2, three d tic tac toe by william daley part of my thesis (see McKenzie TX-0) history.
+1962, Planetary Display, on:tx-2, tag:play, tag:simulation, ron mayer, light pen interactive solar system gravity toy thing. c:Gilmore DEC history talk 90 transcript.
+
+1968, Hamurabi, tag:game
+1971, Empire, tag:game
+1973, Lemonade Stand, tag:game, ported to ApplII in 79 (included in every machine?)
+1974.12, Home Pong, tag:game
+
+1979.6.22, Infocom, tag:infocom, lick, tag:company
+1980, Zork I, tag:infocom, releases game, tag:TRS-80, tag:game
+
+1982, E.T. VCS, tag:game
+
+1952, OXO, (Tic-Tac-Toe), on:EDSAC, tag:game, size:3, tag:hci
+1962, Minskytron, tag:play, tag:minsky, on:pdp-1, date approx/unknown, screensaver like thing
+1962, SpaceWar, cite:Graetz, tag:game, tag:MIT, on:PDP-1, size:3
+1959, Mouse in the Maze, on:TX-0, cite:10Print, tag:play
+1959, HAX, on:TX-0, tag:play, screensaver like thing, date approx/unknown
+1958, Tennis for Two, tag:game, (build on an analog computer for ballistics; to make cool demos for a lab)
+
+1952, Bouncing Ball, on:Whirlwind, tag:play, date approx., charlie adams (says jack gilmore 90 lecture) (or is it charly adama?)
+
+1980, Rubiks Cube, (initially designed in Hungary in 1975 by Ernö Rubik), tag:game
+1978-1992, Speak & Spell, tag:play, tag:toy, tag:educational, tag:TI, tag:computer, 
+1985, Teddy Ruxpin, tag:toy, tag:play
+
+1957, Business Game, tag:Bellman, tag:ibm, tag:game, tag:simulation
+
+1971, Computer Space, tag:Bushnell, tag:game, size:3
+1972, Atari, (founded), tag:Bushnel, tag:company
+1976, Breakout, tag:Atari, tag:Wozniak, tag:Jobs, tag:Bushnell, tag:game
+1978, Space Invaders, tag:game
+1978, Simon, tag:Baer, chip:TMS1000, tag:game
+1979, Asteroids, tag:game, tag:Logg
+1974, Touch Me, (inspired Simon; HA! copy back from Atari), tag:Atari, tag:game
+1968, Pong, tag:Baer, tag:game
+1972, Pong (Atari), tag:Bushnel, tag:game
+1983, Pinball Construction Set, tag:game
+1982, Rocky's Boots, on:AppleII & more, tag:game
+1984, Robot Odyssey, on:AppleII & more, tag:game
+1980, Pac-Man, tag:game
+1980, Rogue, tag:game
+1981, Donkey Kong, tag:Miyamoto, tag:Nintendo, tag:game
+1982, Sokobon, (developed in 81), tag:game
+1984, Tetris, tag:game
+1986, Tetris Spectrum Holobyte, tag:game
+1984, Raid on Bungeling Bay, tag:Wright, tag:C64, tag:game
+1985, Micropolis, tag:game, tag:Wright, tag:C64
+1985, Super Mario Bros., tag:game, tag:nintendo
+1989, SimCity, tag:game, tag:Wright, tag:Maxis, tag:simulation
+1993, Doom, tag:game
+1993, Myst, tag:game
+1997, The Sims, tag:game, tag:Wright, tag:simulation
+1994, SimCity 2000, tag:game, tag:Wright, tag:Maxis, tag:simulation
+1991, SimAnt, tag:game, tag:Wright, tag:Maxis, tag:simulation
+1990, SimEarth, tag:game, tag:Wright, tag:Maxis, tag:simulation
+
+1996, SimCopter,  tag:game, tag:Wright, tag:Maxis, tag:simulation, tag:simlish, c:W
+
+1987, Maxis, tag:company, tag:Wright, tag:maxis
+1997.7.28, EA buys Maxis, tag:maxis, tag:ea
+
+1979, Nintendo hires Miyamoto, tag:Nintendo
+1980, Battlezone, tag:atari, tag:game, tag:Rotberg
+1981, The Bradley Trainer, Battlezone derivative, tag:atari, tag:game, tag:military, date unclear (80?), tag:Rotberg
+
+1976, Adventure (Crowther), platform:PDP-10, tag:Crowther, tag:game, tag:bbn, tag:fortran
+1977, Adventure (Woods), platform:PDP-10, tag:Crowther, tag:game, tag:fortran, tag:Woods
+1980, Mystery House, tag:game, inspired by Adventure, tag:AppleII, tag:sierra
+1977-1979, Zork, tag:game
+
+1997, MAME
+
+2002, America's Army, tag:game, tag:military
+
+1973, Wumpus, tag:PCC, tag:basic, tag:game
+
+
+1979, Adventure (VCS), tag:robbinett, tag:atari, on:2600, tag:game
+1986.2, Zelda, tag:nintendo, tag:miyamoto, tag:game
+1990, Super Famicom, tag:console, tag:computer, tag:nintendo, release date in japan
+1991, SNES, tag:console, tag:computer, tag:nintendo, release date in us
+1988, Genesis, tag:console, tag:computer, tag:sega
+1991, Sonic, tag:game, tag:sega
+1988, Madden, tag:game, tag:ea
+1996, N64, tag:console, tag:computer, tag:nintendo
+1996, Mario 64, tag:game, tag:nintendo
+1983, Mario bros., tag:game, tag:miyamoto, tag:yokoi, tag:arcade, tag:nintendo
+1988, Mario 3, tag:game, tag:nes, japan release date, tag:miyamoto, tag:tezuka, tag:nintendo
+1989, The Wizard, tag:film, tag:mario, tag:nintendo
+
+
+###				Early Software
+
+1962, EDM Magic Slate, tag:ITEK, tag:graphics, tag:company, drafting corporation, see video from MIT c:"EDM a Magic slate" 1962 WGBH, mentions 'man machine barrier' (first guy interviewed).
+1963, Sketchpad, tag:tech, tag:LincolnLab, tag:Sutherland, tag:MIT, tag:TX-2, size:3, tag:software, tag:graphics, tag:hci, tag:Shannon, shannon was sutherland's advisor
+1970, IMLAC, PDS-1, tag:graphics, tag:terminal (add imlac to maze war)
+
+1968-1974, Sutherland @ Utah, (students: Kay, Catmull, Gouraud, Crow).
+1968, Evans & Sutherland, (employees included John Warnock—Adobe, and Jim Clark—SGI)
+1968, NLS, (Mother of All Demos), tag:Engelbart, tag:Brand, tag:software, tag:hci
+
+
+# HCI
+
+1956, Magic #7, George Miller (lick colleague, worked on sage?)
+
+#, Light gun, Everett, tag:HCI
+1952, Light pen, lick (refined gun), tag:HCI, tag:everett, can light gun be separated from pen?, tag:gurley
+
+1964, Mouse, Bill English, size:3
+1922, CRT, tag:HCI, first commercial produact (c:W but unverified). has longer history...
+1971, Floppy Disk, (8 inch IBM)
+1959, MICR font, tag:sri, introduced in US on this date. sri designed US type (e-13b), french designed european CMC-7 font, c:W
+
+1983.8, 'Direct Manipulation', Schneiderman paper cites games a ton, tag:academic-text, tag:hci
+
+
+# Languages
+
+1958, Lisp, tag:McCarthy, connect back to church lambda calculus, tag:language
+1936, Lambda Calculus, tag:academic-text
+
+1964, BASIC, later adapted by DEC, whose version was readapted for Altair. and apple ii. THE hobbyist language, or language of interactive programming., size:3, tag:software, tag:language
+1967, LOGO, tag:MIT, (part of MIT AI Lab; chronology from W is f-ed up)., size:3, tag:software, tag:language, tag:bbn
+
+
+	# more of a teaching tool
+1960, Plato I, urbana of Indiana, needs primary research tag, on ILLIAC I, tag:CDC, tag:software, size:1, tag:plato
+1961, Plato II, tag:software, size:1, tag:plato
+1967, Plato III, tag:software, size:1, tag:plato
+1972, Plato IV, tag:software, size:1, tag:plato
+1980, Micro-PLATO, size:1, tag:plato
+
+
+
+###				MIT related stuff
+
+1952, Theseus Electro-Mouse Maze, see MIT site and Time. Shannon made lots of electromechanical toys says MIT site !!!! (or 1950? Photo?); dyson and time say it influenced Internet switching, call routing !, tag:play
+
+1952, Useless Machine, tag:shannon, tag:minsky,  (turns self off), c:arthur clarke Harper’s 1958, http://frivolousengineering.com/?page_id=3959 has video of minsky describing them collaborating on “fantastic new gadgets”, and voice across the sea book, which describes this and learning eletronic mouse. 1952 date is from web site in here. another site  http://www.kk.org/thetechnium/archives/2008/03/the_unspeakable.php has minksy quote saying 52., tag:at&t bell labs, tag:toy, tag:play, http://www.webofstories.com/play/53169, 
+
+1946, SRI
+1963, SAIL, (McCarthy, left MIT for SAIL).
+
+1968-1970, SHRDLU, tag:MIT, tag:software
+
+1951, Project Lincoln, tag:club, tag:MIT, tag:lick
+
+
+1963, Project MAC, (IPTO project), tag:arpa, tag:mit, tag:lick, tag:minsky, tag:corbato
+1970, MIT AI Lab, direct spinoff from Project MAC (minsky was in both, left to found latter), tag:minsky
+1952, Linc, tag:computer, tag:LincolnLab, tag:Clark, tag:mit
+
+1966, Eliza, author:Weizenbaum, tag:MIT, tag:software
+1967, MIT Architecture Machine Group, tag:MIT
+1985, MIT Media Lab, tag:MIT
+2005, OLPC, tag:MIT
+
+1946, TMRC, hybrid electromechanical, tag:mit, tag:club
+
+
+
+
+#1980, Chaim born
+
+1984, Neuromancer, tag:book, tag:pop
+
+1889, Nintendo Koppai, tag:Nintendo
+1963, Nintendo drops 'Playing Card Co. Ltd.', tag:Nintendo
+1966, Nintendo Ultra-Hand, tag:Nintendo
+1972, Magnavox Odyssey, cite:W, tag:game, size:3
+1974, Odyssey in Japan, cite:W, tag:Nintendo, tag:computer
+1977, Color TV Game, tag:Nintendo, tag:computer
+1980, Game & Watch, tag:Nintendo, tag:game
+1983, Famicom, Released, tag:Nintendo, tag:computer, size:3, chip:6502
+1985, NES, tag:Nintendo, tag:computer, chip:6502
+1989, Game Boy, tag:Nintendo, tag:computer
+1994, PlayStation, tag:computer, tag:sony
+
+, SNES, tag:computer
+, PS2, tag:computer
+, PS3, tag:computer
+
+# 80's Consoles & Computers 
+
+
+1964, Wang LOCI, first electronic calculator, c:Ceruzzi, tag:calculator, tag:computer
+1972, HP-35, c:Ceruzzi, tag:calculator, tag:computer, tag:hp
+1974, HP-65, called a 'personal comp', c:Ceruzzi, tag:calculator, first programmable pocket calc., tag:computer, tag:hp
+1938, HP, tag:hp
+
+# PC and dead-ends (from Ceruzzi's SCOT analysis of PC)
+1974.12, Altair 8800, (got in mail dec, for jan 75 issue), tag:8080, tag:computer, size:3, tag:mits, borrows from: pdp-11, nova, dec basic
+1969, MITS, tag:company, size:1
+1973, MICRAL, (8080) (first PC, but not beyond industrial use), c:Ceruzzi, tag:computer
+1974, Intellec 4, (intel dev system), tag:computer
+1974.3, Scelbi-8H, hobbyist dead end, in QST mag, 8008, tag:computer
+1974.7, Mark-8, hobbyist dead end, Radio Electronics mag, 8008, tag:computer
+1973.9, TV-Typewriter, in radio electronics, tag:computer
+
+1977, Atari VCS (2600), tag:computer
+1976, Fairchild VES, tag:computer
+1983-1985, N.A. video game crash
+
+
+1976, Apple I, tag:computer, tag:Apple, tag:jobs, tag:woz
+1977, Apple II, tag:computer, size:3, tag:Apple, tag:Markulla, markulla came from intel, tag:jobs, tag:woz
+1980, Apple III, tag:computer, tag:Apple
+1980, Apple IPO, tag:Apple
+1983, Lisa, (released), tag:computer, tag:Apple
+1984, Macintosh, tag:tech, tag:computer, size:3, tag:Apple, tag:jobs
+1992, Max IIvx, tag:computer, tag:Apple, first pc with a cdrom
+2001, iPod, tag:computer, tag:Apple, tag:jobs
+2007, iPhone, tag:computer, size:3, tag:Apple, tag:jobs
+2010, iPad, tag:computer, tag:Apple, tag:jobs
+
+1972, Wang 1200, word processor, tag:computer, repurposed calculator, tag:Wang
+1976, Wang 1200 WPS, word processor, tag:computer, chip:8080, tag:Wang
+1965, Wang Loci-2, tag:calculator, tag:Wang
+
+1987, HyperCard, tag:Apple, tag:Macintosh
+
+1983, VisiCalc, tag:software
+1979, Apple Writer, tag:software
+
+
+1972, DynaBook, tag:Vision, (note paper is in 1972; idea is claimed from 68, where?), tag:academic-text, tag:Kay
+1979, Commercial Cell Phone (NTT), Cell phone
+, Smart phone
+
+
+# Culture
+
+1972, People's Computer Company, who:Bob Albrecht
+, Resource One, Brand/Whole Earth founded time share (home company of community memory terminal)
+1973, Community Memory Terminal, (same as above?), url:http://www.wired.com/wiredenterprise/2012/12/social-media-history/, XDS-940 time share and ASR-33 teletype
+
+
+###		Ideas
+
+1949, 'Giant Brains', book, E. Berkley, cite:Aspray, tag:popular-text
+1968-1972, Whole Earth Catalog, tag:Brand, tag:popular-text
+1972.12.7, 'SpaceWar', tag:Brand, tag:popular-text
+1975-1986, Homebrew Computer Club, tag:club, tag:social
+1973, 101 BASIC Computer Games, tag:Ahl, tag:popular-text
+1975, PCC's First Book of Computer Games, tag:popular-text
+1985, WELL, tag:Brand, tag:club, tag:social
+1975, BYTE, tag:popular-text
+1976, Dr. Dobb's, (originally outgrowth of People's Comp Company Tiny BASIC write in), tag:popular-text
+1974, Creative Computing, tag:popular-text
+1993, Wired, tag:popular-text
+, Burning Man, tag:club, tag:social
+1987, 'Media Lab: Inventing the Future', tag:Brand, tag:popular-text
+1964, 'God and Golem Inc.', tag:Weiner, tag:academic-text
+
+1964, Understanding Media, tag:academic-text
+1965, Hypertext, tag:paper, tag:Nelson, tag:vision, tag:academic-text, tag:term
+1975, Computer Lib/Dream Machines, tag:book, tag:vision, tag:Nelson, 1974?, tag:popular-text
+
+
+1967, 'What is CS?', Allen & Newell & Perlis in Science, tag:academic-text
+
+, time sharing (idea)
+
+
+#
+1971.11, 4004, cite:Wikipedia, (Hoff inspired by PDP-8, and ibm1620, small # of instructions, big applications)., cite:Ceruzzi, tag:Intel, size:3, tag:chip
+1972, 8008, cite:Ceruzzi, tag:Intel, tag:chip
+1974, 8080, cite:Ceruzzi, tag:Intel, tag:chip
+, TM1000 (on sale 74, developed 71, so first microprocessor. c:W)., tag:chip
+1976, Z80, tag:chip
+
+1971, 'Silicon Valley', In Electronic News, tag:term
+
+
+# IC
+
+, Texas Instruments
+1948, Transistor, tag:Bell, tag:transistor
+1950, first IC, (military use, $50), ???
+1955, Shockley Transistor Lab, itself breakaway from Bell in a sense, tag:transistor
+1957, Fairchild Semiconductor, tag:transistor, tag:company
+1965, Moore's Law, line:IC
+1958, Integrated Circuit (TI), tag:tech, line:IC
+1974, IC LSIs, tag:tech, line:IC, tag:transistor
+, MOS
+
+
+1968, Intel, (Fairchild spinoff), funded by Max Palevsky (SDS founder), tag:Intel, tag:company
+1974, 6800, tag:chip
+1974.11, 6502, (same designer as 6800), tag:chip
+
+
+
+, Eames IBM work (computers, math, worlds fair exhibits, etc...)
+
+1960, DAC-1 (GM/IBM CAD)
+
+
+
+###		Graphics/film
+
+1974, SIGGRAPH
+1976, Artist and Computer, tag:book, tag:popular-text
+1979, Pixar (in Lucasfilm), tag:Pixar
+1986, Pixar (corp.), tag:Pixar
+1982, Tron, tag:PDP-10, c:W, tag:film
+1982, Star Trek II, tag:Pixar, tag:film
+1995, Toy Story, tag:Pixar, tag:film
+2006, Disney buys Pixar, tag:Pixar
+2012, Wreck it Ralph, chaim thinks is spiritual successor to Tron
+
+1992, OpenGL, tag:sgi
+1996, 3dfx
+
+
+### BBN & MIT, Cybernetics; misc.
+
+1940.10, MIT Rad Lab, tag:mit
+1946, MIT RLE Lab, tag:mit, successor to rad lab
+1946, Macy Conf., tag:cybernetics, wiener
+1945.1.6-1945.1.7, Princeton Conf. before Macy, , tag:cybernetics, wiener, McCulloch, Pitts, goldstone, Aiken
+1943, 'A logical calculus', WS McCulloch, W Pitts - Bulletin of mathematical biology, 1943 - Springer, tag:academic-text, A logical calculus of the ideas immanent in nervous activity, neumann draws upon this in edvac report we think
+
+1948, Bolt & Beranek, tag:company, tag:bbn
+1950, BBN, tag:company, tag:bbn
+1957, Lick @ BBN, tag:bbn
+2009.10.29, Raytheon buys BBN, tag:bbn
+
+
+####	Network stuff
+
+1972.10, ICCC, (int conf on comp and comm), tag:net
+
+1969, ARPANET, size:3, tag:internet, tag:arpa, tag:bbn
+1974, TCP/IP, tag:internet, tag:arpa
+1988, CERT/CC, tag:cmu, in re:morris worm, tag:darpa, tag:arpa, security program set up in response to worm
+1988, Morris Worm, tag:internet, tag:cornell, tag:mit (was a cornell student, launched from mit; actually an experiment gone wrong supposedly)
+1993, 'A Rape in Cyberspace', tag:internet, tag:mud, tag:moo, tag:lambdamoo, tag:popular-text
+2004, Facebook, tag:internet
+#, Twitter, tag:internet
+1983.1.1, Arpanet on TCP/IP, tag:internet
+1986, NSFNet, tag:tcp/ip, ncsa is supercomputer illinois one where browser mosaic andreeson was developed, tag:internet
+1981, CSnet, tag:tcp/ip, tag:internet
+1982, DNS, tag:tcp/ip, originally was hosts.txt at sri handmade, tag:internet
+1980, Usenet, tag:internet
+1982, Milnet, (spinoff of arpanet), tag:tcp/ip
+
+
+1991, WWW, tag:internet
+1993, Mosaic, size:3, tag:internet
+#1994, Netscape, tag:internet
+
+1964, Tymshare, tag:company, tag:timeshare
+1969, Compu-Serv, tag:company, tag:timeshare
+1989, Aol, inherits from AppleLink and Quantim Link, Steve Case, 
+1985, AppleLink, tag:MarkIII, tag:GE
+
+
+# Academic play/game scholarship
+
+1974, D&D, tag:game
+1983, Shared Fantasy, tag:book, tag:academic-text
+1985, Interactive Fiction, author:Mary Ann Buckles, cite:NYT, tag:academic-text
+1980, Mindstorms, tag:vision, tag:academic-text
+1993, Computers as Theatre, tag:book, tag:academic-text, author:Brenda Laurel
+1997, Hamlet on the Holodeck, tag:book, tag:academic-text
+1997, Cybertext, tag:book, tag:academic-text
+
+1983, Harvard games conf., tag:academic-text
+1983, Psych. of V.G., tag:academic-text
+1984, Second Self, tag:academic-text
+
+2011, Reality is Broken, tag:popular-text, tag:progressive
+2008, Fold It, tag:game, tag:progressive
+2002, Serious Games Initiative, tag:progressive, tag:club, Woodrow Wilson Center for International Scholars
+2004, Games for Health, tag:progressive, tag:club, Robert Wood Johnson Foundation
+1999, LeapPad, tag:progressive, tag:computer
+
+#
+1982, The Art of Computer Game Design, author:Crawford, tag:book, tag:vision, tag:popular-text
+1987, The Journal of Computer Game Design, tag:Crawford, tag:gameindustry, tag:popular-text
+1988, Computer Game Developers Conf. (first GDC), line:GDC, cite:W, tag:Crawford, tag:Brenda Laurel, tag:gameindustry, tag:conf
+1999, GDC (CGDC drops 'Computer'), line:GDC, cite:W, tag:gameindustry, tag:conf
+1977,  International Computer-Chess Association, becomes ICGA in 2002.
+
+1994, IDSA & ESRB
+2003, ESA, renamed IDSA, size:1
+
+1951-1987, Joint Computer Conf., tag:conf
+
+
+1977-1987, TASP, tag:academic, tag:conf
+1959, A formal analysis of game meaning, author:BSS, tag:academic-text
+1979, Piaget; Play and Cognition; Revisited, author:BSS, tag:academic-text
+1997, Ambiguity of Play, author:BSS, tag:academic-text
+
+2003, Rules of Play, tag:academic-text
+1998, CMU ETC, tag:academic-program
+
+1998, DAC, tag:aarseth
+2003, Digra, tag:academic-text
+2001, Game Studies Journal, tag:academic-journal
+
+1999, Mobile Internet (Japan), "i-mode", cite:Daliot-Bul, tag:net
+
+#
+2003, Beyond Productivity, tag:policy, tag:academic-text
+2012, Media Systems Workshop, tag:academic-text
