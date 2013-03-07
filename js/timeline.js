@@ -144,6 +144,50 @@ var eventViews = [] ;
 
 var yearThickness=[yearEnd]; // array of [yearStart] ... [yearEnd] with rightmost pixel edge
 
+var rollover ;
+var selection ;
+
+
+
+
+	/*
+	 *	cEvent & cEventView
+	 */
+	 
+function cEvent()
+{
+	this.tag	=	 {} ;
+	this.title	=	 '' ;
+	this.year	=	 0 ;
+	this.size   =	 2 ;
+
+	this.searchTextLowerCase =	 '' ;
+
+	this.hasTag = function( value )
+	{
+		return this.hasAttr( 'tag', value ) ;
+	}
+
+	this.hasAttr = function( type, value )
+	{
+		return type in this.tag && (value in this.tag[type]) ;
+	}
+			
+	this.findStringInEventLowerCase = function(string)
+	{
+		return this.searchTextLowerCase.indexOf(string) !== -1 ;
+	}
+}
+
+function cEventView()
+{
+	this.text		= null ;
+	this.dot		= null ;
+	this.event		= null ;
+	
+	this.group		= null ;
+}
+
 
 
 
@@ -155,7 +199,8 @@ main() ;
 
 function main()
 {
-		
+	
+	// install query text entry box update
 	$('#query').keyup( updateQuery ).keydown( updateQuery ) ;
 
 	function updateQuery( keyEvent )
@@ -168,8 +213,11 @@ function main()
 	}
 
 
+	// initialize year thickness
 	for( var i=yearStart; i<yearEnd; ++i ) yearThickness[i]=0 ;
 
+
+	// draw date lines
 	addDateLines() ;
 
 
@@ -180,7 +228,7 @@ function main()
 	//console.log(location) ;
 
 
-	// hotload
+	// setup csv hotload
 	var doHotloadCSV = location.host.indexOf("local") !== -1 ;
 	console.log("Hotload is " + doHotloadCSV) ;
 
@@ -201,7 +249,7 @@ function main()
 	}
 
 
-	//
+	// parse csv data
 	eventsAsArray = CSVToArray( csvGet.content ) ;
 	eventsAll     = parseEventsFromArray(eventsAsArray) ;
 	eventsByYear  = getEventsByYear(eventsAll) ;
@@ -219,19 +267,17 @@ function main()
 	}) ;
 
 
-	// load params
-
+	// load params from URL (eg default query specified)
 	var gURLVars = getUrlVars() ;
 
 	//console.log( gURLVars ) ;
-
 	if ( !isUndef( gURLVars["query"] ) )
 	{
 		var query = gURLVars["query"] ;
 		
 		//console.log( query ) ;
 		
-		$('#query').val( query ) ;
+		$('#query').val( query ) ; // set textbox
 		
 		doQuery(query) ;
 	}
@@ -239,10 +285,58 @@ function main()
 }
 
 
+	/*
+	 *	Event handlers
+	 */
 
-//
-// Utilities
-//
+// interaction
+/*
+function onMouseMove(event)
+{
+    mousePos = event.point;
+}*/
+
+function onFrame(event)
+{
+	//cursor.segments[0].point = mousePos ;	
+}
+
+function onResize(event) {
+    // Whenever the window is resized, recenter the path:
+}
+
+function onMouseDrag(event)
+{
+    if ( selection )
+	{
+		selection.group.position += event.delta;
+	}
+}
+
+function onMouseDown(event)
+{
+	//selection = pickEventView(event.point) ;
+	
+	if (selection)
+	{
+		//console.log(selection) ;
+//		selection.group.guide = true ;
+	}	
+}
+
+function onMouseUp(event)
+{
+	if (selection)
+	{
+//		selection.group.guide = false ;
+		selection = null ;
+	}
+}
+
+
+	//
+	// Utilities
+	//
 
 function isUndef (v)
 {
@@ -300,7 +394,6 @@ function parseEventsFromArray( a )
 	return result ;
 }
 
-
 function parseEventFromArray( a )
 {
 	var e ;
@@ -311,23 +404,8 @@ function parseEventFromArray( a )
 		 || a[0][0]==="#" ) // commented out
 		 return e ;
 	
-	// init it	
-	e = {
-		tag		: {},
-		title	: '',
-		year	: 0,
-		size    : 2,
-
-		searchTextLowerCase : '',		
-		
-		hasTag  : function( value )			{ return this.hasAttr( 'tag', value ) ; },
-		hasAttr : function( type, value )	{ return type in this.tag && (value in this.tag[type]) ; },
-		
-		findStringInEventLowerCase : function(string)
-		{
-			return this.searchTextLowerCase.indexOf(string) !== -1 ;
-		}
-	} ;
+	// init it
+	e = new cEvent() ;
 	
 	// grab annotations
 	for( var i=1; i<a.length; ++i )
@@ -391,6 +469,18 @@ function parseEventFromArray( a )
 	
 	// return
 	return e ;
+}
+
+function pickEventView( pt )
+{
+	for( i in eventViews )
+	{
+		var v = eventViews[i] ;
+		
+		if ( v.group.bounds.contains(pt) ) return v ;
+	}
+	
+	return null ;
 }
 
 
@@ -663,13 +753,13 @@ function addEventToView( event )
 
 
 	// make view object
-	v = {
-		
-		text	: text ,
-		dot		: dot ,
-		event	: event
-		
-	} ;
+	v = new cEventView() ;
+	
+	v.text		=	 text  ;
+	v.dot		=	 dot  ;
+	v.event		=	 event  ;
+	
+	v.group = new Group( [dot,text] ) ;
 	
 	eventViews.push(v) ;
 	
@@ -715,9 +805,6 @@ function addDateLines()
 }
 
 
-function onResize(event) {
-    // Whenever the window is resized, recenter the path:
-}
 
 function httpGet(theUrl)
 {
@@ -734,17 +821,6 @@ function httpGet(theUrl)
 }
 
 
-// interaction
-/*
-function onMouseMove(event)
-{
-    mousePos = event.point;
-}*/
-
-function onFrame(event)
-{
-	//cursor.segments[0].point = mousePos ;	
-}
 
 
 
