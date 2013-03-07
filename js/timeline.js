@@ -147,6 +147,10 @@ var yearThickness=[yearEnd]; // array of [yearStart] ... [yearEnd] with rightmos
 var rollover ;
 var selection ;
 
+var layerYears ;
+var layerEvents ;
+var layerEventDetail ;
+var layerLines ;
 
 
 
@@ -205,11 +209,11 @@ function main()
 
 	function updateQuery( keyEvent )
 	{
-		var query = document.getElementsByName('query')[0].value ;
+		// hide any rollover
+		showEventViewDetail(null) ;
 		
-		var func = filterEventByFuncFromQuery( query ) ;
-		
-		applyFilterToEventsView( func ) ;
+		// do query
+		doQuery( document.getElementsByName('query')[0].value ) ;
 	}
 
 
@@ -217,8 +221,15 @@ function main()
 	for( var i=yearStart; i<yearEnd; ++i ) yearThickness[i]=0 ;
 
 
+	// setup layers
+	layerYears  = new Layer() ;
+	layerLines  = new Layer() ;
+	layerEvents = new Layer() ;
+	layerEventDetail = new Layer() ;
+	
+
 	// draw date lines
-	addDateLines() ;
+	addDateLines(layerYears) ;
 
 
 	// get csv data, check for updates
@@ -309,13 +320,15 @@ function onMouseDrag(event)
 {
     if ( selection )
 	{
-		selection.group.position += event.delta;
+		//selection.group.position += event.delta;
 	}
 }
 
 function onMouseDown(event)
 {
-	//selection = pickEventView(event.point) ;
+	selection = pickEventView(event.point) ;
+	
+	showEventViewDetail(selection) ;
 	
 	if (selection)
 	{
@@ -332,6 +345,111 @@ function onMouseUp(event)
 		selection = null ;
 	}
 }
+
+
+	/*
+	 *	High level event do-ers
+	 */
+
+function doQuery( query )
+{
+	// do event query
+	var func = filterEventByFuncFromQuery( query ) ;
+	
+	applyFilterToEventsView( func ) ;
+	
+	
+	// show line thing
+	var lineEvents = [] ;
+	
+	if (func)
+	{
+		eventViews.map( function(eview)
+		{
+			if ( func(eview.event) )
+			{
+				lineEvents.push(eview) ;
+			}
+		}) ;
+	}
+	
+	showEventsLine( lineEvents ) ;
+}
+
+
+	/*
+	 *	Event Detail
+	 */	
+
+function showEventsLine( eventViews )
+{
+	layerLines.removeChildren() ;
+	
+	if ( eventViews && eventViews.length>0 )
+	{
+		// build it
+		var line = new Path() ;
+		
+		eventViews.map( function(eview)
+		{
+			line.add( eview.dot.position ) ;
+		}) ;
+		
+		
+		// style it
+		line.strokeColor = new RgbColor(0,0,0,.15) ;
+		line.strokeWidth = 5 ;
+		
+		line.smooth() ;
+		
+		
+		// add
+		layerLines.addChild(line) ;
+	}
+}
+
+function showEventViewDetail( eview )
+{
+	// kill old one
+	layerEventDetail.removeChildren() ;
+	
+	// make one?
+	if (eview)
+	{
+		// text
+		var text = new PointText( eview.dot.position + {x:0,y:18} ) ;
+		
+		text.content = eview.event.searchTextLowerCase ;
+		
+		
+		// backing white
+		var r   = 4 ; 
+		var boxBounds = new Rectangle(text.bounds) ;
+		boxBounds.bottom += 3 ;
+		boxBounds.right += 3 ;
+		boxBounds.left -= 2 ;
+		boxBounds.top -= 2 ;
+		var box = new Path.RoundRectangle( boxBounds, r ) ;
+		
+		box.fillColor   = new RgbColor(1,1,1,.95) ;
+		box.strokeColor = new RgbColor(0,0,0,.5) ;
+		box.strokeWidth = 1 ;
+
+
+		var shadowBounds = new Rectangle(boxBounds) ;
+		shadowBounds.y += 2 ;
+		shadowBounds.width -= 4 ;
+		var shadow = new Path.RoundRectangle( shadowBounds, r ) ;
+		
+		shadow.fillColor   = new RgbColor(0,0,0,.2) ;
+		
+		// add them
+		layerEventDetail.addChild(shadow) ;
+		layerEventDetail.addChild(box) ;
+		layerEventDetail.addChild(text) ;
+	}
+}
+
 
 
 	//
@@ -408,9 +526,12 @@ function parseEventFromArray( a )
 	e = new cEvent() ;
 	
 	// grab annotations
+	e.searchTextLowerCase = a[0] ;
+	
 	for( var i=1; i<a.length; ++i )
 	{
 		var colonAt = a[i].indexOf(':') ;
+		
 		if (colonAt==-1)
 		{
 			e.searchTextLowerCase += ' ' + a[i].toLowerCase() ;
@@ -448,7 +569,7 @@ function parseEventFromArray( a )
 	// title
 	e.title = trimWhiteSpace( a[1] ) ;
 
-	e.searchTextLowerCase += ' ' + e.title.toLowerCase() ;
+	//e.searchTextLowerCase += ' ' + e.title.toLowerCase() ;
 	
 	// date
 	var date  = a[0] ;
@@ -464,7 +585,7 @@ function parseEventFromArray( a )
 		
 	e.year = dateRange[0][0] ;
 		
-	e.searchTextLowerCase += ' ' + e.year ;
+	//e.searchTextLowerCase += ' ' + e.year ;
 
 	
 	// return
@@ -761,12 +882,14 @@ function addEventToView( event )
 	
 	v.group = new Group( [dot,text] ) ;
 	
+	layerEvents.addChild(v.group) ;
+	
 	eventViews.push(v) ;
 	
 	return v ;
 }
 
-function addDateLines()
+function addDateLines( layer )
 {
 	var left  = 50 ;
 	var right = view.size.width ; //- left ;
@@ -781,7 +904,9 @@ function addDateLines()
 
 		// line
 		var line = new Path.Line( new Point(left,y), new Point(right,y) ) ;
-				
+		
+		layer.addChild(line) ;
+		
 		if ( isMajorSeg )
 		{
 			line.strokeColor = new GrayColor( 0.2 ) ;
@@ -800,6 +925,8 @@ function addDateLines()
 			text.fillColor = new GrayColor( isMajorSeg ? 0.25 : 0.5 );
 			text.fontSize = 15 ;
 			text.content = year ;
+			
+			layer.addChild(text) ;
 		}
 	}
 }

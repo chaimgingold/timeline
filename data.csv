@@ -255,9 +255,9 @@ Color tv
 
 
 1956, Forrestor joins Sloan School, tag:mit, tag:forrestor
-1961, Industrial Dynamics, tag:Forrestor, tag:academic-text, tag:mit
-1971, World Dynamics, tag:Forrestor, tag:academic-text, tag:mit
-1969, Urban Dynamics, tag:Forrestor, tag:academic-text, tag:mit
+1961, Industrial Dynamics, tag:Forrestor, tag:academic-text, tag:mit, tag:simulation
+1971, World Dynamics, tag:Forrestor, tag:academic-text, tag:mit, tag:simulation
+1969, Urban Dynamics, tag:Forrestor, tag:academic-text, tag:mit, tag:simulation
 
 
 
@@ -352,26 +352,26 @@ Color tv
 1990, LambdaMOO, (first moo?), tag:game, tag, tag:net, tag:multiplayer
 1997, Ultima Online, tag:game, tag:net, tag:multiplayer
 
-1968, Civil War, tag:game, written by 3 highschool students, c:101
-1969, Lunar Lander (text), tag:game, aka: Rocket, Lunar, LEM, and Apollo. c:W, on:pdp-8
-1973, Lunar Lander, tag:game, on:gt40, commissioned by DEC for a trade show demos.
-1979, Lunar Lander (atari), tag:game, tag:atari, tag:arcade, chip:6502
+1968, Civil War, tag:game, written by 3 highschool students, c:101, tag:simulation
+1969, Lunar Lander (text), tag:game, aka: Rocket, Lunar, LEM, and Apollo. c:W, on:pdp-, tag:simulation8
+1973, Lunar Lander, tag:game, on:gt40, commissioned by DEC for a trade show demos., tag:simulation
+1979, Lunar Lander (atari), tag:game, tag:atari, tag:arcade, chip:6502, tag:simulation
 1971, Star Trek, tag:game
 1979, Alto Trek 2.1, tag:game, on:alto, v1 date totally unclear v2.1 is 1979 according to docs, tag:multiplayer
 1978, Pinball, tag:game, on:alto, date based on high res screenshot looks like XVIII
-1969, Space Travel, tag:unix, tag:thompson, tag:multics, tag:fortran, on:pdp-7, tag:game
+1969, Space Travel, tag:unix, tag:thompson, tag:multics, tag:fortran, on:pdp-7, tag:play, tag:simulation
 
 1948, CRT Amusement Device, tag:game, not on a proper computer, it's purely electronic like Pong
 1951, NIM, on:NIMROD, tag:game, tag:Ferranti
-1961, Kalah, on:pdp-1, tag:dec, tag:BBN, tag:Roland Silver
+1961, Kalah, on:pdp-1, tag:dec, tag:BBN, tag:Roland Silver, tag:game
 
 
 1960, Cubic, tag:game, on:tx-2, three d tic tac toe by william daley part of my thesis (see McKenzie TX-0) history.
 1962, Planetary Display, on:tx-2, tag:play, tag:simulation, ron mayer, light pen interactive solar system gravity toy thing. c:Gilmore DEC history talk 90 transcript.
 
-1968, Hamurabi, tag:game
+1968, Hamurabi, tag:game, tag:simulation
 1971, Empire, tag:game
-1973, Lemonade Stand, tag:game, ported to ApplII in 79 (included in every machine?)
+1973, Lemonade Stand, tag:game, ported to ApplII in 79 (included in every machine?), tag:simulation
 1974.12, Home Pong, tag:game
 
 1979.6.22, Infocom, tag:infocom, lick, tag:company
@@ -386,13 +386,13 @@ Color tv
 1959, HAX, on:TX-0, tag:play, screensaver like thing, date approx/unknown
 1958, Tennis for Two, tag:game, (build on an analog computer for ballistics; to make cool demos for a lab)
 
-1952, Bouncing Ball, on:Whirlwind, tag:play, date approx., charlie adams (says jack gilmore 90 lecture) (or is it charly adama?)
+1952, Bouncing Ball, on:Whirlwind, tag:play, date approx., charlie adams (says jack gilmore 90 lecture) (or is it charly adama?), tag:simulation
 
 1980, Rubiks Cube, (initially designed in Hungary in 1975 by Ernö Rubik), tag:game
 1978-1992, Speak & Spell, tag:play, tag:toy, tag:educational, tag:TI, tag:computer, 
 1985, Teddy Ruxpin, tag:toy, tag:play
 
-1957, Business Game, tag:Bellman, tag:ibm, tag:game, tag:simulation
+1957, Business Game, tag:Bellman, tag:ibm, tag:game, tag:simulation, tag:education
 
 1971, Computer Space, tag:Bushnell, tag:game, size:3
 1972, Atari, (founded), tag:Bushnel, tag:company
@@ -413,7 +413,7 @@ Color tv
 1984, Tetris, tag:game
 1986, Tetris Spectrum Holobyte, tag:game
 1984, Raid on Bungeling Bay, tag:Wright, tag:C64, tag:game
-1985, Micropolis, tag:game, tag:Wright, tag:C64
+1985, Micropolis, tag:game, tag:Wright, tag:C64, tag:simulation
 1985, Super Mario Bros., tag:game, tag:nintendo
 1989, SimCity, tag:game, tag:Wright, tag:Maxis, tag:simulation
 1993, Doom, tag:game
@@ -610,7 +610,7 @@ Color tv
 1949, 'Giant Brains', book, E. Berkley, cite:Aspray, tag:popular-text
 1968-1972, Whole Earth Catalog, tag:Brand, tag:popular-text
 1972.12.7, 'SpaceWar', tag:Brand, tag:popular-text
-1975-1986, Homebrew Computer Club, tag:club, tag:social
+1975-1986, Homebrew Computer Club, tag:club, tag:social, tag:jobs, tag:woz
 1973, 101 BASIC Computer Games, tag:Ahl, tag:popular-text
 1975, PCC's First Book of Computer Games, tag:popular-text
 1985, WELL, tag:Brand, tag:club, tag:social
