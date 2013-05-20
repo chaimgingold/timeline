@@ -9,15 +9,18 @@ Color tv
 
 , RAND War Games
 
-, War Games, tag:film
 
+# Misc Games
+
+1974, D&D, tag:game
+1913, Little Wars, tag:game, tag:popular-text, by:HGWells
 
 
 #		Other theory
 
 1945, As We May Think, author:Bush, tag:popular-text, size:3
 1962, 'Augmenting human intellect', tag:academic-text, tag:engelbart
-1950, Turing Test, title:Computing Machinery and Intelligence, tag:Turing, tag:academic-text
+1950, Turing Test, title:Computing Machinery and Intelligence, tag:Turing, tag:academic-text, tag:game
 
 1968, 'Computer as Communication Device', tag:Licklider, tag:academic-text
 1960, 'Man-Computer Symbiosis', tag:Licklider, tag:academic-text
@@ -30,12 +33,20 @@ Color tv
 
 1964, 'computer utility', (see greenberger in Atlantic monthly) killed by falling hardware prices (IC!) and software failures
 
-1964, 'Understanding Media', tag:mcluhan
+1964, 'Understanding Media', tag:mcluhan, tag:academic-text
+1964, 'Notes on Synthesis of Form', by:alexander, tag:academic-text
+1970, 'Sciences of the Artificial', by:Simon, tag:academic-text
+1950, Caissac, tag:shannon, tag:game, tag:chess, tag:computer, tag:ai, date approx; name is from Eames Comp. Perspective, but date (?) (play on Caissa, chess goddess. Russians later named one kaissa).
+1953, Throbac I, tag:shannon, tag:computer, tag:play, tag:bell
+, Bird Cage game
+, remote control cars
+1956, Los Alamos chess, on:maniac, 6x6 board variant without bishops, tag:game, tag:ai, also described by Ahl in Wolf, ulam et al
 
 
 
 #		Game Theory, Simulation and so on...
 
+1954, 'Complete Strategyst', tag:academic-book, by:Williams, c:Ahl in Wolf/Ahl 2003
 1928, 'On the Theory of Parlor Games', "Zur Theorie der Gesellschaftsspiele"., tag:Neumann, tag:academic-text
 1944, Theory of games and economic behavior, tag:Neumann, tag:academic-text, size:3
 1960, 'Strategy of Conflict', tag:academic-text
@@ -46,6 +57,7 @@ Color tv
 , Actual lab mice in mazes as lab experiments (10 print)
 1986, 'Vehicles', tag:academic-text
 2002, A new kind of science, tag:academic-text
+1973, Huntingson II, tag:simulation, tag:education, malaria buffalo population rats fish, Friedland, Frishman, DEC
 
 
 #		Non-digital play (noteworthy to us)
@@ -66,18 +78,30 @@ Color tv
 #		AI & games
 
 1951, Checkers & Chess, tag:game, tag:ai, tag:Stratchey, tag:Prinz, c:W, on:Ferranti Mark 1
-1952, Samuels's Checkers AI, tag:ibm, tag:samuels, tag:game, publication date is 59. was involved in a sales demo somehow. (W is source for 52 date).
+1952, Samuels's Checkers AI, tag:ibm, tag:samuels, tag:game, publication date is 59. was involved in a sales demo somehow. (W is source for 52 date). Ahl in Wolf says 53 was first demo.
 
 1949, 'Programming a Computer for Playing Chess', tag:Shannon, tag:academic-text, tag:ai, tag:chess
 1959-1962, Kotok-McCarthy chess AI, tag:game, tag:ai
 1948-1950, Turbochamp, tag:Turing, tag:Champernowne, tag:game, tag:ai, theoretical; it's a design that wasn't executed on a machine, tag:chess
 
-1953, Hex, tag:shannon, tag:game, tag:computer, tag:ai, see Computers and Automata
-1953.3.18, A Mind Reading (?) Machine, tag:shannon, tag:at&t bell, tag:game theory, tag:game, tag:ai
+1953, Hex, tag:shannon, tag:game, tag:computer, tag:ai, c:Computers and Automata, made by shannon and moore
+1953.3.18, A Mind Reading (?) Machine, tag:shannon, tag:at&t bell, tag:game theory, tag:game, tag:ai, in Shannon1955 he discsuses hooking up his machine to Hagelbarger's (penny betting game) and having a third "umpire" machine keep score, and letting them run, taking bets, etc...
 
 1996-1997, Deep Blue v. Kasparov, tag:ibm, tag:chess, tag:ai
 1942, Karl Zuse Chess program, tag:chess, purely theoretical to demonstrate Plankalkul language he had designed. like turbochamp., tag:ai, tag:game, tag:chess
 
+1977, Belle, tag:bell, tag:chess, tag:ai, by:thompson, by:condon, tag:computer
+
+# early automata
+
+1878, AN AUTOMATIC TIT-TAT-TO MACHINE, tag:game, tag:computer, tag:ai, c:Freeland1879, tag:babbage, at upenn, tag:Tic-Tac-Toe
+1914, El Ajedrecista, tag:game, tag:computer, tag:chess, by:Leonardo Torres y Quevedo, c:Shannon1955
+
+
+# shannon's toys
+
+1955, Nimwit, tag:nim, tag:game, tag:computer, c:Shannon1955, date approx must be <= 55
+1950, Tic Tac Toe, tag:tic tac toe, tag:game, tag:computer, c:Shannon1955, c:Keister1950, shannon demos his build in 1955; keister designs circuit in 1950 (patent). shannon's version has a tilt sensor in it, too.
 
 
 # AI/Cog Sci broadly
@@ -95,6 +119,10 @@ Color tv
 
 
 
+1954, Blackjack, tag:game, on:IBM701, c:Ahl in Wolf/Ahl 2003
+1954, Pool, tag:game, c:Ahl in Wolf/Ahl 2003, used graphics
+1955, Hutspiel, tag:game, tag:military, tag:simulation, c:Ahl in Wolf/Ahl 2003
+1952, First military simulations, tag:game, tag:military, tag:simulation, c:Ahl 2003
 
 
 1947, 'Information Systems of Inter-connected Digital Computers', forrestor and Crawford and Everett, tag:academic-text
@@ -109,13 +137,13 @@ Color tv
 
 1972, C, tag:thompson, tag:Ritchie, tag:at&t, tag:unix, c:W, developed so they could port unix from pdp-7 to pdp-11, 1973 unix rewritten in C, tag:language, on:pdp-11
 
-1971, 1st UNIX dist., tag:game, tag:os, tag:unix, blackjack (bj), tic tac toe (ttt), moo (moo), and chess (chess) (among other games) (games described in '71 man pages, "man71" "User-maintained software"
+1971, 1st UNIX dist., tag:game, tag:os, tag:unix, blackjack (bj), tic tac toe (ttt), moo (moo), and chess (chess) (among other games) (games described in '71 man pages, "man71" "User-maintained software", by:thompson, by:ritchie
 	#1971, bj, tag:unix, tag:game, tag:thompson
 	#1971, moo, tag:unix, tag:game, tag:thompson
 	#1971, chess, tag:unix, tag:game, tag:thompson
 	#1971, ttt, tag:unix, tag:game, tag:thompson
 
-1969, UNIX, link to multics, tag:at&t, tag:os, on:pdp-7, tag:thomspon, tag:ritchie, note that r&t want the 'fellowship' they had on multics as well as the computer. they had computers. timeshare community as a virus spreading from mit.,
+1969, UNIX, link to multics, tag:at&t, tag:os, on:pdp-7, tag:thomspon, note that r&t want the 'fellowship' they had on multics as well as the computer. they had computers. timeshare community as a virus spreading from mit., by:thompson, by:ritchie
 
 1977, BSD, tag:OS, tag:unix, tag:Joy, tag:Thomson
 1991.10.5, Linux, tag:os, tag:unix
@@ -182,6 +210,13 @@ Color tv
 
 1962.10.1-1964, Licklider heads IPTO, (Arpa IPTO; funds Stanford, utah MIT, CMU) (
 
+1932-1938, Bush MIT Dean, tag:bush, tag:mit
+1940, Bush chairs NDRC, tag:bush
+1941, Bush directs OSRD, tag:bush
+1944, 'Science, the Endless Frontier', by:bush
+1935, Network Analyzer, tag:bush, tag:mit, tag:computer, (1925 prototype; see Preston's 2003 IEEE article).
+1925, Network Analyzer prototype, tag:bush, tag:mit, tag:computer, (see Preston's 2003 IEEE article).
+
 1964-1966, Sutherland heads IPTO
 1966-1968, Taylor heads IPTO, (later Parc cs)
 1975, Heilmeier heads ARPA
@@ -232,7 +267,7 @@ Color tv
 1954, Strachey generator, 'The 'Thinking' Machine' is article about love letter generator
 1960, CBS Western, 'The Thinking Machine', TX-0 (why 1956 photo at computer history museum?)
 1968, Switched on Bach, tag:music
-1970, Software exhibit, tag:Nelson, tag:Negroponte
+1970, Software exhibit, tag:Nelson, tag:Negroponte, tag:exhibit
 1956, SAGE pinup, tag:SAGE, tag:play
 
 
@@ -277,10 +312,11 @@ Color tv
 1937-1943, Harvard Mark 1, (made by IBM), Aiken (electromechanical). No branches, physical loops of instruction tape., cite:Aspray, tag:computer, tag:ibm
 1939, Complex Computer, AT&T stibitz complex numbers, tag:computer
 1939, ABC, cite:Aspray, tag:computer, Atsanoff-Berry Computer (Iowa physicist)f
-1945, ENIAC, (online; electric, no stored programs, patched). Moore school., cite:Aspray, tag:computer
+1945, ENIAC, (online; electric, no stored programs, patched). Moore school., cite:Aspray, tag:computer, tag:upenn (same school as earlier tit-tat-to machine).
 1949, EDSAC, (online; English edvac machine; first stored program computer but for colossus), cite:Aspray, tag:computer
 1952, JOHNNIAC, tag:RAND, tag:computer
-1952, IAS Machine, tag:Neumann, tag:computer
+1952, IAS, tag:Neumann, tag:computer
+1952, MANIAC I, tag:computer, los alamos computer inspired by IAS, had a chess game on it
 
 1963.5, JOSS, tag:language, on:johnniac, tag:rand
 1964, RAND Tablet, tag:arpa, tag:rand, see RAND doc; looks like a wacom tablet precisely in diagram with a computer!, tag:hci
@@ -354,21 +390,25 @@ Color tv
 
 1968, Civil War, tag:game, written by 3 highschool students, c:101, tag:simulation
 1969, Lunar Lander (text), tag:game, aka: Rocket, Lunar, LEM, and Apollo. c:W, on:pdp-, tag:simulation8
-1973, Lunar Lander, tag:game, on:gt40, commissioned by DEC for a trade show demos., tag:simulation
+1973, Lunar Lander, tag:game, on:gt40, commissioned by DEC for a trade show demos., tag:simulation, ahl in wolf claims visual DEC lander game was 69. This is perhaps better data than wikipedia.
 1979, Lunar Lander (atari), tag:game, tag:atari, tag:arcade, chip:6502, tag:simulation
 1971, Star Trek, tag:game
+1971, Oregon Trail, tag:game, tag:simulation, tag:educational
 1979, Alto Trek 2.1, tag:game, on:alto, v1 date totally unclear v2.1 is 1979 according to docs, tag:multiplayer
 1978, Pinball, tag:game, on:alto, date based on high res screenshot looks like XVIII
 1969, Space Travel, tag:unix, tag:thompson, tag:multics, tag:fortran, on:pdp-7, tag:play, tag:simulation
 
 1948, CRT Amusement Device, tag:game, not on a proper computer, it's purely electronic like Pong
-1951, NIM, on:NIMROD, tag:game, tag:Ferranti
+1951, NIMROD, tag:game, tag:Ferranti, tag:computer, tag:nim
+1940, Nimatron, tag:game, tag:computer, tag:nim, exhibited at world's fair, tag:westinghouse (see Condon 1940).
+1940, Elektro, tag:robot, tag:play, exhibited at world's fair, tag:westinghouse; see https://www.youtube.com/watch?v=Ay225WkU4Gs
 1961, Kalah, on:pdp-1, tag:dec, tag:BBN, tag:Roland Silver, tag:game
 
 
-1960, Cubic, tag:game, on:tx-2, three d tic tac toe by william daley part of my thesis (see McKenzie TX-0) history.
+1960, Cubic, tag:game, on:tx-2, three d tic tac toe by william daley part of ms thesis (see McKenzie TX-0) history; 1955 Qubic covered by Franklin Institute. boardgamegeek claims 1947.
 1962, Planetary Display, on:tx-2, tag:play, tag:simulation, ron mayer, light pen interactive solar system gravity toy thing. c:Gilmore DEC history talk 90 transcript.
 
+1965, Sumerian Game, tag:game, tag:simulation, tag:ibm, precursor to hamurabi, see avedon and sutton smith p308 and Moncreiff (might be older, but Moncreiff article is 65); part of general genre of business simulation games, but more fantastical.
 1968, Hamurabi, tag:game, tag:simulation
 1971, Empire, tag:game
 1973, Lemonade Stand, tag:game, ported to ApplII in 79 (included in every machine?), tag:simulation
@@ -379,9 +419,10 @@ Color tv
 
 1982, E.T. VCS, tag:game
 
-1952, OXO, (Tic-Tac-Toe), on:EDSAC, tag:game, size:3, tag:hci
-1962, Minskytron, tag:play, tag:minsky, on:pdp-1, date approx/unknown, screensaver like thing
+1952, OXO, tag:Tic-Tac-Toe, on:EDSAC, tag:game, size:3, tag:hci
+1962, Minskytron, tag:play, tag:minsky, on:pdp-1, date approx/unknown, screensaver like thing; aka tripos (licklider refers to it in his computers in museums paper)
 1962, SpaceWar, cite:Graetz, tag:game, tag:MIT, on:PDP-1, size:3
+1962, Expensive Planetarium, tag:play, tag:MIT, on:PDP-1
 1959, Mouse in the Maze, on:TX-0, cite:10Print, tag:play
 1959, HAX, on:TX-0, tag:play, screensaver like thing, date approx/unknown
 1958, Tennis for Two, tag:game, (build on an analog computer for ballistics; to make cool demos for a lab)
@@ -389,23 +430,41 @@ Color tv
 1952, Bouncing Ball, on:Whirlwind, tag:play, date approx., charlie adams (says jack gilmore 90 lecture) (or is it charly adama?), tag:simulation
 
 1980, Rubiks Cube, (initially designed in Hungary in 1975 by Ernö Rubik), tag:game
-1978-1992, Speak & Spell, tag:play, tag:toy, tag:educational, tag:TI, tag:computer, 
+1978-1992, Speak & Spell, tag:play, tag:toy, tag:educational, tag:TI, tag:computer, preceded by Little Professor (so cute!) calculator edu toy
+1962, The Talking Typewriter, tag:education, c:Ahl in Wolf/Ahl 2003, moore at yale
+
 1985, Teddy Ruxpin, tag:toy, tag:play
 
-1957, Business Game, tag:Bellman, tag:ibm, tag:game, tag:simulation, tag:education
+1954, 'Gaming as a Technique of Analysis', tag:rand, tag:academic-text
+1952, 'Use and Limitations of Mathematical Models, tag:rand, tag:academic-text
 
-1971, Computer Space, tag:Bushnell, tag:game, size:3
+1955, Monopologs, tag:game, tag:simulation, tag:rand, tag:military, tag:war, see Longworth 1970 or Avedon and sutton-smith business games.
+1957, Business Game, tag:Bellman, tag:rand, tag:ibm, tag:game, tag:simulation, tag:education, Bellman also invented dynamic programming, he worked for rand; influenced by game theory. see paper! appears in 1962 ibm program catalog as executive game, two variants; also references Go as example of combinatorial explosion(!), and incorrectly says it is japanese.
+1959, Mangement Game, tag:game, tag:simulation, c:Ahl in Wolf/Ahl 2003, cohen & cyert & dill at carnegie tech in pittsburgh
+
+1962, Computer Automated Music, tag:ibm, tag:music, tag:play, on:ibm650, must be <=1962 since in ibm program library listing; also referenced in Kalb's piece on baseball simulator. note using typewriter for percussion in index notes! Kalb says in '74 they had a symphony written by Jóhann Gunnarsson. same program?
+1964, 1401 Symphony, on:ibm1401, tag:play, tag:music; see Andrews 07 Wired article. His son produced into 1401 a user's manual, full performance, later. also recorded stuff in 71 (see http://www.discogs.com/J%C3%B3hann-J%C3%B3hannsson-IBM-1401-A-Users-Manual/release/803484)
+
+1961, Baseball, tag:game, tag:simulation, tag:sports, on:ibm1620, c:grantland article, by:Burgeson
+1970, High Noon, tag:game, tag:basic
+1971, Computer Space, tag:Bushnell, tag:game, size:3, tag:arcade
+1971, Galaxy Game, tag:game, tag:arcade
 1972, Atari, (founded), tag:Bushnel, tag:company
 1976, Breakout, tag:Atari, tag:Wozniak, tag:Jobs, tag:Bushnell, tag:game
 1978, Space Invaders, tag:game
 1978, Simon, tag:Baer, chip:TMS1000, tag:game
 1979, Asteroids, tag:game, tag:Logg
 1974, Touch Me, (inspired Simon; HA! copy back from Atari), tag:Atari, tag:game
+1967, Video pool, tag:game, tag:RCA, c:Ahl in Wolf/Ahl 2003
+1968, Rocket Car Sim, tag:simulation, MIT judah schwartz, c:Ahl in Wolf/Ahl 2003
+1969, Flight Sim, tag:simulation, evans and sutherland, c:Ahl in Wolf/Ahl 2003
 1968, Pong, tag:Baer, tag:game
+1967, Chase Game, tag:Baer, sanders associates (started thinking of this in 66).
 1972, Pong (Atari), tag:Bushnel, tag:game
+1976, Pong kit, tag:game
 1983, Pinball Construction Set, tag:game
-1982, Rocky's Boots, on:AppleII & more, tag:game
-1984, Robot Odyssey, on:AppleII & more, tag:game
+1982, Rocky's Boots, on:AppleII & more, tag:game, tag:educational
+1984, Robot Odyssey, on:AppleII & more, tag:game, tag:educational
 1980, Pac-Man, tag:game
 1980, Rogue, tag:game
 1981, Donkey Kong, tag:Miyamoto, tag:Nintendo, tag:game
@@ -489,7 +548,7 @@ Color tv
 1958, Lisp, tag:McCarthy, connect back to church lambda calculus, tag:language
 1936, Lambda Calculus, tag:academic-text
 
-1964, BASIC, later adapted by DEC, whose version was readapted for Altair. and apple ii. THE hobbyist language, or language of interactive programming., size:3, tag:software, tag:language
+1964, BASIC, on:GE225, later adapted by DEC, whose version was readapted for Altair. and apple ii. THE hobbyist language, or language of interactive programming., size:3, tag:software, tag:language, ahl (in Wolf) says edu games appear within months of the language.
 1967, LOGO, tag:MIT, (part of MIT AI Lab; chronology from W is f-ed up)., size:3, tag:software, tag:language, tag:bbn
 
 
@@ -506,7 +565,7 @@ Color tv
 
 1952, Theseus Electro-Mouse Maze, see MIT site and Time. Shannon made lots of electromechanical toys says MIT site !!!! (or 1950? Photo?); dyson and time say it influenced Internet switching, call routing !, tag:play
 
-1952, Useless Machine, tag:shannon, tag:minsky,  (turns self off), c:arthur clarke Harper’s 1958, http://frivolousengineering.com/?page_id=3959 has video of minsky describing them collaborating on “fantastic new gadgets”, and voice across the sea book, which describes this and learning eletronic mouse. 1952 date is from web site in here. another site  http://www.kk.org/thetechnium/archives/2008/03/the_unspeakable.php has minksy quote saying 52., tag:at&t bell labs, tag:toy, tag:play, http://www.webofstories.com/play/53169, 
+1952, Ultimate Machine, tag:shannon, tag:minsky,  (turns self off), c:arthur clarke Harper’s 1958, http://frivolousengineering.com/?page_id=3959 has video of minsky describing them collaborating on “fantastic new gadgets”, and voice across the sea book, which describes this and learning eletronic mouse. 1952 date is from web site in here. another site  http://www.kk.org/thetechnium/archives/2008/03/the_unspeakable.php has minksy quote saying 52., tag:at&t bell labs, tag:toy, tag:play, http://www.webofstories.com/play/53169, 
 
 1946, SRI
 1963, SAIL, (McCarthy, left MIT for SAIL).
@@ -520,7 +579,7 @@ Color tv
 1970, MIT AI Lab, direct spinoff from Project MAC (minsky was in both, left to found latter), tag:minsky
 1952, Linc, tag:computer, tag:LincolnLab, tag:Clark, tag:mit
 
-1966, Eliza, author:Weizenbaum, tag:MIT, tag:software
+1966, Eliza, author:Weizenbaum, tag:MIT, tag:software, tag:play
 1967, MIT Architecture Machine Group, tag:MIT
 1985, MIT Media Lab, tag:MIT
 2005, OLPC, tag:MIT
@@ -534,7 +593,8 @@ Color tv
 
 1984, Neuromancer, tag:book, tag:pop
 
-1889, Nintendo Koppai, tag:Nintendo
+1889, Marufuku, tag:Nintendo, c:Kent
+1951, Nintendo, tag:Nintendo, marfuku changes name to nintendo playing card co., c:Kent
 1963, Nintendo drops 'Playing Card Co. Ltd.', tag:Nintendo
 1966, Nintendo Ultra-Hand, tag:Nintendo
 1972, Magnavox Odyssey, cite:W, tag:game, size:3
@@ -545,6 +605,26 @@ Color tv
 1985, NES, tag:Nintendo, tag:computer, chip:6502
 1989, Game Boy, tag:Nintendo, tag:computer
 1994, PlayStation, tag:computer, tag:sony
+
+1956, Rosen Enterprises, tag:japan, tag:rosen, tag:sega, tag:company
+1964, SEGA, tag:rosen, tag:japan
+1966, Periscope, tag:game, tag:electromechanical, tag:arcade, tag:sega
+1974, Wild Gunman, tag:game, tag:electromechanical, tag:arcade, tag:nintendo
+1936, Ray-O-Lite, tag:game, tag:electromechanical, tag:arcade, tag:light gun
+
+1931, Baffle Ball, tag:Gottleib, tag:Pinball, tag:game, tag:mechanical
+1932, Ballyhoo, tag:Bally, tag:Pinball, tag:game, tag:mechanical, bingo gambling based
+1933, Contact, tag:Pinball, tag:game, tag:Williams, first tilt mechanism, tag:electromechanical
+1947, Humpty Dumpty, tag:Gottlieb, tag:pinball, tag:game, tag:electromechanical, adds flippers; 6, c:Kent
+1948, Triple Action, tag:Genco, tag:pinball, tag:game, tag:electromechanical, 2 flippers; c:kent(?), 2 is cheaper than 6 is reason.
+1951, Bright Lights, tag:Bally, tag:pinball, tag:game, tag:electromechanical, bingo style gambling
+1956, Perky, tag:Bally, tag:pinball, tag:game, tag:electromechanical, 1st to use circuit boards, c:Ahl 2003
+
+1948, Bat-A-Score, tag:game, tag:electromechanical, tag:baseball
+1937, World Series, tag:game, tag:electromechanical, tag:baseball
+1940, Ski-Ball, tag:game, tag:electromechanical, one of many released this year; this game style is older than this date according to W.
+1928, Iron Claw, tag:game, tag:electromechanical, maybe not the first; but earliest in Marvin3m.com on wayback I can find (excellent electro-mechanical game index).
+1929, Grandmothers Predictions, tag:play, tag:electromechanical, early fortune telling amusement
 
 , SNES, tag:computer
 , PS2, tag:computer
@@ -567,8 +647,9 @@ Color tv
 1974.7, Mark-8, hobbyist dead end, Radio Electronics mag, 8008, tag:computer
 1973.9, TV-Typewriter, in radio electronics, tag:computer
 
-1977, Atari VCS (2600), tag:computer
-1976, Fairchild VES, tag:computer
+1977, Atari VCS (2600), tag:computer, tag:tv, tag:console
+1976, Channel F, tag:computer, tag:fairchild, tag:console
+1977, CompIV, tag:computer, tag:game, tag:tv, tag:console, c:Reid-Green 2003, milton bradley mastermind
 1983-1985, N.A. video game crash
 
 
@@ -605,9 +686,36 @@ Color tv
 1973, Community Memory Terminal, (same as above?), url:http://www.wired.com/wiredenterprise/2012/12/social-media-history/, XDS-940 time share and ASR-33 teletype
 
 
+# Eames
+1953, A Communications Primer, tag:film, by:eames, tag:ibm, c:EamesDesign, tag:shannon, apparently shannon used it in his classes and ibm also used it for education
+1957, The Information Machine, tag:film, by:eames, tag:ibm, (p222 Eames), c:EamesDesign
+1960, Intro. to Feedback, tag:film, by:eames, tag:ibm, c:EamesDesign, tag:cybernetics
+1961, Mathematica, by:eames, tag:ibm, c:EamesDesign, exhibit for California Museum of Science and Tech, tag:exhibit
+1964, IBM/Eames World's Fair, new york world's fair, tag:eames, tag:ibm, c:EamesDesign. This is the exhibit with the suspended building., tag:exhibit
+1968, A Computer Glossary, by:eames, tag:ibm, c:EamesDesign, tag:film
+1968, Babbage's Calculating Machine, by:eames, tag:ibm, c:EamesDesign, tag:film
+1968, IBM Museum & Presentation Center, by:eames, tag:ibm, c:EamesDesign, tag:film, proposal for a museum, proposal and executed IBM presentation center space (with toys, mathematica exhibit materials, and more...); photos look like the AutoDesk space near Embarcedero
+1971, A Computer Perspective, tag:exhibit, by:eames, tag:ibm, c:EamesDesign, had an associated film, too. a history of computers from 1890-1950. looks amazing.
+1973, A Computer Perspective, tag:book, by:eames, tag:ibm, c:EamesDesign, from book, tag:popular-text
+1972, Wallace J. Eckert, tag:exhibit, by:eames, tag:ibm, c:EamesDesign, on astronomy and computers.
+1973, Movable Feasts, tag:exhibit, by:eames, tag:ibm, c:EamesDesign
+1973, On the Shoulders of Giants, tag:exhibit, by:eames, tag:ibm, c:EamesDesign
+1974, Newton Cards, by:eames, tag:ibm, c:EamesDesign, card variants made for ibm dinner for nobel lauretes, tag:play
+1977, IBM Corporate Exhibit, proposal ibm eames, tag:exhibit
+
+
+
+
 ###		Ideas
 
-1949, 'Giant Brains', book, E. Berkley, cite:Aspray, tag:popular-text
+1949, 'Giant Brains', by:E.Berkeley, cite:Aspray, tag:popular-text
+1950, Squee, tag:computer, robotic squirrel, by:E.Berkeley, c:Sugimoto
+1950, Simon, tag:computer, logic calculator, by:E.Berkeley, c:Sugimoto
+1955, 'Geniacs', tag:computer, tag:kit, tag:toy, tag:hobbyist, by:E.Berkeley, tag:popular-text
+1956, Relay Moe, tag:computer, tag:game, tic tac toe, by:E.Berkeley, c:Sugimoto
+1959, 'Brainiacs', tag:computer, tag:kit, tag:toy, tag:hobbyist, by:E.Berkeley, tag:popular-text
+
+
 1968-1972, Whole Earth Catalog, tag:Brand, tag:popular-text
 1972.12.7, 'SpaceWar', tag:Brand, tag:popular-text
 1975-1986, Homebrew Computer Club, tag:club, tag:social, tag:jobs, tag:woz
@@ -644,7 +752,8 @@ Color tv
 
 # IC
 
-, Texas Instruments
+#1930, Geophysical Service, tag:company
+#1951, Texas Instruments (was Geophysical Service), tag:company
 1948, Transistor, tag:Bell, tag:transistor
 1950, first IC, (military use, $50), ???
 1955, Shockley Transistor Lab, itself breakaway from Bell in a sense, tag:transistor
@@ -661,13 +770,11 @@ Color tv
 
 
 
-, Eames IBM work (computers, math, worlds fair exhibits, etc...)
-
-1960, DAC-1 (GM/IBM CAD)
-
 
 
 ###		Graphics/film
+
+1960, DAC-1 (GM/IBM CAD)
 
 1974, SIGGRAPH
 1976, Artist and Computer, tag:book, tag:popular-text
@@ -681,6 +788,10 @@ Color tv
 
 1992, OpenGL, tag:sgi
 1996, 3dfx
+
+1983, WarGames, tag:film
+1968, 2001, tag:film, by:kubrick, by:clark
+
 
 
 ### BBN & MIT, Cybernetics; misc.
@@ -728,13 +839,17 @@ Color tv
 
 # Academic play/game scholarship
 
-1974, D&D, tag:game
 1983, Shared Fantasy, tag:book, tag:academic-text
+1941, Play & Seriousness, tag:paper, tag:academic-text
+1938, Homo Ludens, tag:book, tag:academic-text, by:Huizinga
+1958, Les Jeux et Les Hommes, by:Caillois, tag:book, tag:academic-text
 1985, Interactive Fiction, author:Mary Ann Buckles, cite:NYT, tag:academic-text
 1980, Mindstorms, tag:vision, tag:academic-text
 1993, Computers as Theatre, tag:book, tag:academic-text, author:Brenda Laurel
 1997, Hamlet on the Holodeck, tag:book, tag:academic-text
 1997, Cybertext, tag:book, tag:academic-text
+
+1983, Pilgrim in the Microworld, tag:Sudnow, tag:popular-text, tag:breakout, tag:atari
 
 1983, Harvard games conf., tag:academic-text
 1983, Psych. of V.G., tag:academic-text
@@ -770,6 +885,7 @@ Color tv
 1998, DAC, tag:aarseth
 2003, Digra, tag:academic-text
 2001, Game Studies Journal, tag:academic-journal
+1970, Simulation & Gaming, tag:academic-journal
 
 1999, Mobile Internet (Japan), "i-mode", cite:Daliot-Bul, tag:net
 

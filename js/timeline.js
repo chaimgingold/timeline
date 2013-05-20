@@ -74,7 +74,8 @@ Tags for computers:
 - commercial/research/military
 
 TODO:
-- rollover
+- show what has fallen off the bottom; perhaps with inserted random lines per item, or dated items in a list with dates.
+- fix elements falling off rhs. maybe with divs + svg?
 */
 
 
@@ -116,11 +117,23 @@ var eventTagX =
 	'computer'		: 350,
 	'academic-text' : 800,
 	'popular-text'  : 800,
+	'exhibit'		: 800,
 	'chip'			: 800,
-	'film'			: 200
+	'film'			: 820
 //	'politics'		: 0
 } ;
 
+var eventTagF =
+{
+	'MIT'			: colorDotF('red'),
+	'game'			: colorDotF('blue'),
+	'play'			: colorDotF('CCACE0'),
+	'computer'		: colorDotF('green'),
+	'academic-text' : colorDotF('orange'),
+	'popular-text'  : colorDotF('yellow'),
+	'film'			: colorDotF('orange'),
+	'exhibit'		: colorDotF('yellow')		
+} ;
 	
 /*
 bright 1 http://www.colourlovers.com/palette/1144734/timeline
@@ -301,11 +314,15 @@ function main()
 	 */
 
 // interaction
-/*
+
 function onMouseMove(event)
 {
-    mousePos = event.point;
-}*/
+	//mousePos = event.point;
+
+	rollover = pickEventView(event.point) ;
+	
+	showEventViewDetail(rollover) ;
+}
 
 function onFrame(event)
 {
@@ -326,6 +343,7 @@ function onMouseDrag(event)
 
 function onMouseDown(event)
 {
+	/*
 	selection = pickEventView(event.point) ;
 	
 	showEventViewDetail(selection) ;
@@ -334,16 +352,17 @@ function onMouseDown(event)
 	{
 		//console.log(selection) ;
 //		selection.group.guide = true ;
-	}	
+	}*/	
 }
 
 function onMouseUp(event)
 {
+	/*
 	if (selection)
 	{
 //		selection.group.guide = false ;
 		selection = null ;
-	}
+	}*/
 }
 
 
@@ -360,20 +379,23 @@ function doQuery( query )
 	
 	
 	// show line thing
-	var lineEvents = [] ;
-	
-	if (func)
+	if (0)
 	{
-		eventViews.map( function(eview)
+		var lineEvents = [] ;
+		
+		if (func)
 		{
-			if ( func(eview.event) )
+			eventViews.map( function(eview)
 			{
-				lineEvents.push(eview) ;
-			}
-		}) ;
+				if ( func(eview.event) )
+				{
+					lineEvents.push(eview) ;
+				}
+			}) ;
+		}
+		
+		showEventsLine( lineEvents ) ;
 	}
-	
-	showEventsLine( lineEvents ) ;
 }
 
 
@@ -842,17 +864,7 @@ function addEventToView( event )
 	text.content = event.title ;
 	
 	
-	// color
-	var eventTagF =
-	{
-		'MIT'			: colorDotF('red'),
-		'game'			: colorDotF('blue'),
-		'play'			: colorDotF('CCACE0'),
-		'computer'		: colorDotF('green'),
-		'academic-text' : colorDotF('orange'),
-		'popular-text'  : colorDotF('yellow')
-	} ;
-	
+	// color	
 	applyTag( eventTagF, event,
 		function( f )
 		{
