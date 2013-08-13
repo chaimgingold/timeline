@@ -115,6 +115,7 @@ Color tv
 1947, Whirlwind designed, tag:Forrestor, tag:MIT, tag:computer, designed on this date initially
 #1946, Whirlwind begins, (eventually includes 1st CRT use??), tag:computer
 1951, Whirlwind online, tag:whirlwind, tag:Forrestor, tag:MIT, tag:computer
+1951, Whirlwind music, tag:whirlwind, tag:Forrestor, tag:MIT, at end of demo in See It Now: Jay W. Forrester and the WHIRLWIND Computer - (1951), sings mary had a little lamb
 1959, SAGE operational, tag:war, tag:ibm, tag:whirlwind, tag:sage, tag:computer
 
 
@@ -265,7 +266,7 @@ Color tv
 ##		literature, art, stuff
 
 1954, Strachey generator, 'The 'Thinking' Machine' is article about love letter generator
-1960, CBS Western, 'The Thinking Machine', TX-0 (why 1956 photo at computer history museum?)
+1960, CBS Western, 'The Thinking Machine', TX-0 (why 1956 photo at computer history museum?), aka SAGAII, see Morse 1960
 1968, Switched on Bach, tag:music
 1970, Software exhibit, tag:Nelson, tag:Negroponte, tag:exhibit
 1956, SAGE pinup, tag:SAGE, tag:play
@@ -423,7 +424,8 @@ Color tv
 1962, Minskytron, tag:play, tag:minsky, on:pdp-1, date approx/unknown, screensaver like thing; aka tripos (licklider refers to it in his computers in museums paper)
 1962, SpaceWar, cite:Graetz, tag:game, tag:MIT, on:PDP-1, size:3
 1962, Expensive Planetarium, tag:play, tag:MIT, on:PDP-1
-1959, Mouse in the Maze, on:TX-0, cite:10Print, tag:play
+1959, Mouse in the Maze, on:TX-0, cite:10Print, tag:play, cite:Ward-1959. first virtual character? quite elaborate.
+1962, Munchin Squares, display demo 'hack', reputedly on PDP-1, but I saw a program listing for TX-0 on bitsavers.
 1959, HAX, on:TX-0, tag:play, screensaver like thing, date approx/unknown
 1958, Tennis for Two, tag:game, (build on an analog computer for ballistics; to make cool demos for a lab)
 
@@ -577,7 +579,7 @@ Color tv
 
 1963, Project MAC, (IPTO project), tag:arpa, tag:mit, tag:lick, tag:minsky, tag:corbato
 1970, MIT AI Lab, direct spinoff from Project MAC (minsky was in both, left to found latter), tag:minsky
-1952, Linc, tag:computer, tag:LincolnLab, tag:Clark, tag:mit
+1962, Linc, tag:computer, tag:LincolnLab, tag:Clark, tag:mit
 
 1966, Eliza, author:Weizenbaum, tag:MIT, tag:software, tag:play
 1967, MIT Architecture Machine Group, tag:MIT
