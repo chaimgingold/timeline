@@ -1,0 +1,52 @@
+# Timeline General Settings
+---
+settings:
+  yearToPxScale : !!int 17
+  yearToPxStart : !!int 30 
+  yearMajorLine : !!int 10 
+  yearMinorLine : !!int 1 
+  itemHorizGutter : !!int 60
+  itemFirstX : !!int 75
+  isTimeForwardUp : !!bool true
+  
+# Event Rendering Information
+# Sizes
+---
+eventTagX:
+  game : !!int 600
+  play : !!int 600
+  software : !!int 600
+  language : !!int 600
+  computer : !!int 350
+  academic-text : !!int 800
+  popular-text : !!int 800
+  exhibit : !!int 800
+  chip : !!int 800
+  film : !!int 820
+
+# Coloring
+---
+eventTagF:
+  MIT : red
+  game : blue
+  play : CCACCE0
+  computer : green
+  academic-text : orange 
+  popular-text : yellow 
+  exhibit : yellow
+  film : orange 
+
+
+#Event Listing
+---
+events:
+  -
+    name: D&D
+    date : 1974
+    tags: [game]
+  -
+    name: Little Wars
+    date : 1913
+    tags: [game, popular-text]
+    by: H. G. Wells
+  

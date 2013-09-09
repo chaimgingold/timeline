@@ -79,8 +79,11 @@ TODO:
 */
 
 
+/*
+ *    Includes
+ */
 
-
+require('js-yaml');
 
 
 
@@ -98,6 +101,8 @@ var yearMinorLine = 1 ;
 
 var itemHorizGutter = 60 ;
 var itemFirstX      = 75 ;
+
+var dataFileName= "data.csv";
 
 // orient time
 var isTimeForwardUp = true ;
@@ -246,7 +251,7 @@ function main()
 
 
 	// get csv data, check for updates
-	csvGet = httpGet("data.csv") ;
+	csvGet = httpGet(dataFileName) ;
 	//htmlModified = httpGet("").modified ;
 	//console.log(htmlModified) ;
 	//console.log(location) ;
@@ -263,7 +268,7 @@ function main()
 				//console.log(csvGet.modified) ;
 				
 				if (    /*httpGet("").modified !== htmlModified
-					 ||*/ httpGet("data.csv")   .modified !== csvGet.modified )
+					 ||*/ httpGet(dataFileName)   .modified !== csvGet.modified )
 				{
 					//insertParam( 'query', $('#query').text() ) ;
 					location.reload(true) ;
@@ -519,6 +524,7 @@ function getEventsByYear( a )
 	
 	return byy ;
 }
+
 
 function parseEventsFromArray( a )
 {
