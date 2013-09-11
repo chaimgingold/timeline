@@ -83,8 +83,6 @@ TODO:
  *    Includes
  */
 
-require('js-yaml');
-
 
 
 	/*
