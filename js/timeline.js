@@ -89,13 +89,14 @@ TODO:
 	 *	Constants
 	 */
 
-var yearStart = 1925 ;
-var yearEnd   = 2015 ;
+var yearStart = 2009;
+var yearEnd   = 2013 ;
 
-var yearToPxScale  = 17 ; //20 ; //17 ;
+var yearToPxScale  = 300 ; //20 ; //17 ;
 var yearToPxStart  = 30 ;
-var yearMajorLine = 10 ;
+var yearMajorLine = 1 ;
 var yearMinorLine = 1 ;
+var drawMonths = true;
 
 var itemHorizGutter = 60 ;
 var itemFirstX      = 75 ;
@@ -108,6 +109,7 @@ var isTimeForwardUp = true ;
 var colors =
 	[ '9F6B8F', '8FC1B3', 'F4EE86', 'F7D464', 'FE424E' ] ;
 	// bright 1
+
 	
 //console.log(colors) ;
 
@@ -169,7 +171,9 @@ function cEvent()
 {
 	this.tag	=	 {} ;
 	this.title	=	 '' ;
-	this.year	=	 0 ;
+	this.year	=	 0;
+  this.month = 0;
+  this.day = 0;
 	this.size   =	 2 ;
 
 	this.searchTextLowerCase =	 '' ;
@@ -178,7 +182,6 @@ function cEvent()
 	{
     return this.tag[value];
 	}
-
 			
 	this.findStringInEventLowerCase = function(string)
 	{
@@ -493,7 +496,27 @@ function yearToPx( year )
 	return off * yearToPxScale + yearToPxStart ;
 }
 
+function monthToPx( year, month )
+{
+  var yearOff = yearToPx(year);
+  var monthOff;
 
+  if(isTimeForwardUp) monthOff = 12 - (month - 1);
+  else    monthOff = month - 1;
+
+  return yearOff + monthOff * (yearToPxScale / 12);
+}
+
+function dayToPx( year, month, day)
+{
+  var monthOff = monthToPx(year, month);
+  var dayOff;
+
+  if(isTimeForwardUp) dayOff = -day; //assuming all months have 31 days for now
+  else      dayOff = day;                //and that leap years don't exist...gasp!
+
+  return monthOff + dayOff * (yearToPxScale / 365);
+}
 
 //
 // Munging input data
@@ -539,10 +562,17 @@ function parseEvent( a )
 
   e.title = a.title;
 
-  e.year = a.date.split("-")[0].split(".")[0];
+  var range = a.date.split("-");
+  var ymd = range[0].split(".");
+
+  e.year = ymd[0];
+  if( ymd.length > 1) e.month = ymd[1];
+  if( ymd.length > 2) e.day = ymd[2];
 
   e.searchTextLowerCase = e.title.toLowerCase() + " ";
   e.searchTextLowerCase += e.year + " ";
+  if(e.month > 0) e.searchTextLowerCase += e.month + " ";
+  if(e.day > 0) e.searchTextLowerCase += e.day + " ";
 
   if(a.hasOwnProperty('size'))
   {
@@ -803,6 +833,14 @@ function addEventToView( event )
 	x = Math.min( x, view.size.width-30 ) ; // display horiz. overload as glitch
 	
 	var loc = new Point( x, yearToPx(event.year)) ;
+
+  if( event.month != 0 && event.day != 0)
+  {
+    loc = new Point( x, dayToPx(event.year, event.month, event.day));
+  } else if( event.month != 0)
+  {
+    loc = new Point( x, monthToPx(event.year, event.month));
+  }
 	
 	var dot = new Path.Circle( loc, r ) ;
 	dot.fillColor = new GrayColor( 0.7 ) ;
@@ -879,6 +917,26 @@ function addDateLines( layer )
 		
 		if ( isMajor ) line.strokeWidth = 2 ;
 
+    if ( drawMonths )
+    {
+      for(var i = 1; i < 12; i ++)
+      {
+        //Month line
+        var m = y + i * ( yearToPxScale / 12 );
+        var monthLine = new Path.Line( new Point(left, m), new Point(right,m));
+        layer.addChild(monthLine);
+        monthLine.strokeColor = new GrayColor( 0.075);
+
+        //Month Text
+        var monthText = new PointText( new Point(left - 10, m + 4) );
+        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        monthText.justification = 'right';
+        monthText.fillColor = new GrayColor( 0.5);
+        monthText.fontSize = 12;
+        monthText.content = months[isTimeForwardUp ? (12 - i) : i];
+        layer.addChild(monthText);
+      }
+    }
 								
 		
 		// year #s

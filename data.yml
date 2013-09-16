@@ -32,27 +32,26 @@ customAttributes:
 #Event Listing
 events:
   -
-    title: D&D
-    date : "1974"
+    title: GDC 2010
+    date : 2010.3.9-2010.3.13
     tags: [game]
   -
-    title: Little Wars
-    date : "1913"
+    title: Start Fall Quarter 2009
+    date : 2009.9.24
     tags: [game, popular-text]
-    by: H. G. Wells
   -
-    title: As We May Think
-    date : "1945"
+    title: End Fall Quarter 2009
+    date : 2009.12.10
     tags: [popular-text]
-    author: Bush
-    size: 3
   -
-    title: '"Augmenting human intellect"'
-    date : "1962"
+    title: FDG 2010
+    date : 2010.6.18-2010.6.21
     tags: [academic-text, engelbart]
   -
-    title: Turing Test
-    date : "1950"
-    tags: [Turing, academic-text,game]
-    in: Computing Machinery and Intelligence
-  
+    title: Start Spring Quarter 2010
+    date : 2010.3.29
+    tags: [academic-text, game]
+  -
+    title: End Spring Quarter 2010
+    date: 2010.6.10
+    tags: [academic-text, game]
