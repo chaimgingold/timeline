@@ -1,5 +1,4 @@
 # Timeline General Settings
----
 settings:
   yearToPxScale : !!int 17
   yearToPxStart : !!int 30 
@@ -11,42 +10,49 @@ settings:
   
 # Event Rendering Information
 # Sizes
----
 eventTagX:
-  game : !!int 600
-  play : !!int 600
-  software : !!int 600
-  language : !!int 600
-  computer : !!int 350
-  academic-text : !!int 800
-  popular-text : !!int 800
-  exhibit : !!int 800
-  chip : !!int 800
-  film : !!int 820
+  game : 600
+  play : 600
+  software : 600
+  language : 600
+  computer : 350
+  academic-text : 800
+  popular-text : 800
+  exhibit : 800
+  chip : 800
+  film : 820
 
-# Coloring
----
-eventTagF:
-  MIT : red
-  game : blue
-  play : CCACCE0
-  computer : green
-  academic-text : orange 
-  popular-text : yellow 
-  exhibit : yellow
-  film : orange 
+# Index of custom attributes
+customAttributes:
+  - by
+  - author
+  - in
 
 
 #Event Listing
----
 events:
   -
-    name: D&D
-    date : 1974
+    title: D&D
+    date : "1974"
     tags: [game]
   -
-    name: Little Wars
-    date : 1913
+    title: Little Wars
+    date : "1913"
     tags: [game, popular-text]
     by: H. G. Wells
+  -
+    title: As We May Think
+    date : "1945"
+    tags: [popular-text]
+    author: Bush
+    size: 3
+  -
+    title: '"Augmenting human intellect"'
+    date : "1962"
+    tags: [academic-text, engelbart]
+  -
+    title: Turing Test
+    date : "1950"
+    tags: [Turing, academic-text,game]
+    in: Computing Machinery and Intelligence
   

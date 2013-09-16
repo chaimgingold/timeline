@@ -100,7 +100,7 @@ var yearMinorLine = 1 ;
 var itemHorizGutter = 60 ;
 var itemFirstX      = 75 ;
 
-var dataFileName= "data.csv";
+var dataFileName= "data.yml";
 
 // orient time
 var isTimeForwardUp = true ;
@@ -111,20 +111,7 @@ var colors =
 	
 //console.log(colors) ;
 
-var eventTagX =
-{
-	'game'			: 600,
-	'play'			: 600,
-	'software'		: 600,
-	'language'		: 600,
-	'computer'		: 350,
-	'academic-text' : 800,
-	'popular-text'  : 800,
-	'exhibit'		: 800,
-	'chip'			: 800,
-	'film'			: 820
-//	'politics'		: 0
-} ;
+var eventTagX;
 
 var eventTagF =
 {
@@ -168,6 +155,10 @@ var layerEvents ;
 var layerEventDetail ;
 var layerLines ;
 
+var currentYamlData;
+var currentUrlQuery;
+var customAttrs;
+
 
 
 	/*
@@ -185,13 +176,9 @@ function cEvent()
 
 	this.hasTag = function( value )
 	{
-		return this.hasAttr( 'tag', value ) ;
+    return this.tag[value];
 	}
 
-	this.hasAttr = function( type, value )
-	{
-		return type in this.tag && (value in this.tag[type]) ;
-	}
 			
 	this.findStringInEventLowerCase = function(string)
 	{
@@ -229,7 +216,7 @@ function main()
 		showEventViewDetail(null) ;
 		
 		// do query
-		doQuery( document.getElementsByName('query')[0].value ) ;
+		doQuery( $('#query').val() ) ;
 	}
 
 
@@ -247,39 +234,44 @@ function main()
 	// draw date lines
 	addDateLines(layerYears) ;
 
+  // get initial yaml data
+  requestDataFile(dataFileName, convertDataFileToEvents);
 
-	// get csv data, check for updates
-	csvGet = httpGet(dataFileName) ;
-	//htmlModified = httpGet("").modified ;
-	//console.log(htmlModified) ;
-	//console.log(location) ;
+	// setup yaml hotload
+	var doHotloadYaml = false;// = true;
 
-
-	// setup csv hotload
-	var doHotloadCSV = location.host.indexOf("local") !== -1 ;
-	console.log("Hotload is " + doHotloadCSV) ;
-
-	if ( doHotloadCSV )
+	if ( doHotloadYaml )
 	{
-		setInterval( function()
-			{
-				//console.log(csvGet.modified) ;
-				
-				if (    /*httpGet("").modified !== htmlModified
-					 ||*/ httpGet(dataFileName)   .modified !== csvGet.modified )
-				{
-					//insertParam( 'query', $('#query').text() ) ;
-					location.reload(true) ;
-				}
-				
-			}, 500 ) ;
+    setInterval(function(){
+        requestDataFile(dataFileName, convertDataFileToEvents);
+      },500);
 	}
+}
 
+function requestDataFile(fileName, callback)
+{
+  $.ajax({
+    url: fileName,
+    success: callback,
+    ifModified:true,
+    error: function(jqXHR, textStatus, errorThrown){
+      console.log(textStatus + " " + errorThrown);
+    }
+  });
+}
 
-	// parse csv data
-	eventsAsArray = CSVToArray( csvGet.content ) ;
+function convertDataFileToEvents(dataFile)
+{
+
+  currentYamlData = jsyaml.load(dataFile);
+
+	// parse yaml data 
+	eventsAsArray = currentYamlData.events;
 	eventsAll     = parseEventsFromArray(eventsAsArray) ;
 	eventsByYear  = getEventsByYear(eventsAll) ;
+
+  eventTagX = currentYamlData.eventTagX;
+  customAttrs = currentYamlData.customAttributes;
 
 	// sort events by year
 	eventsByYear.map( function( oneYear )
@@ -293,8 +285,8 @@ function main()
 		oneYear.map( addEventToView ) ; // populate eventViews
 	}) ;
 
-
 	// load params from URL (eg default query specified)
+  //
 	var gURLVars = getUrlVars() ;
 
 	//console.log( gURLVars ) ;
@@ -302,13 +294,13 @@ function main()
 	{
 		var query = gURLVars["query"] ;
 		
-		//console.log( query ) ;
-		
-		$('#query').val( query ) ; // set textbox
-		
-		doQuery(query) ;
+    if(currentUrlQuery !== query)
+    {
+      $('#query').val( query ) ; // set textbox
+      currentUrlQuery = query;
+      doQuery(query) ;
+    }
 	}
-
 }
 
 
@@ -530,7 +522,7 @@ function parseEventsFromArray( a )
 	
 	for( var i=0; i<a.length; ++i )
 	{
-		var e = parseEventFromArray(a[i]) ;
+		var e = parseEvent(a[i]) ;
 		
 		if ( !isUndef(e) ) result.push(e) ;
 	}
@@ -538,82 +530,40 @@ function parseEventsFromArray( a )
 	return result ;
 }
 
-function parseEventFromArray( a )
+function parseEvent( a )
 {
 	var e ;
 
-	// empty? (skip blank/empty lines)
-	if (    a.length==0
-		 || a[0]===""	 // no date
-		 || a[0][0]==="#" ) // commented out
-		 return e ;
-	
 	// init it
 	e = new cEvent() ;
-	
-	// grab annotations
-	e.searchTextLowerCase = a[0] ;
-	
-	for( var i=1; i<a.length; ++i )
-	{
-		var colonAt = a[i].indexOf(':') ;
-		
-		if (colonAt==-1)
-		{
-			e.searchTextLowerCase += ' ' + a[i].toLowerCase() ;
-			continue ;
-		}
-		
-		name  = a[i].slice(0,colonAt) ;
-		value = a[i].slice(colonAt+1,a[i].length) ;
-		
-		name  = trimWhiteSpace(name ) ;
-		value = trimWhiteSpace(value) ;
-		
-		if (value[0]==' ') continue ; // hack to skip real uses of colon
-		
-		//console.log( '\"' + name + '\"' + '::' + '\"' + value + '\"' ) ;
 
-		if ( isUndef(e.tag[name]) ) e.tag[name] = {} ;
-		
-		e.tag[ name ][value] = 1 ;
-		
-		// add to search text
-		e.searchTextLowerCase += ' ' + value.toLowerCase() ;
-	}
+  e.title = a.title;
 
+  e.year = a.date.split("-")[0].split(".")[0];
 
-	// size
-	if ( 'size' in e.tag )
-	{
-		var s = e.tag.size ;
-		
-		for( var j in s ) e.size = parseInt(j) ;
-	}
-	
+  e.searchTextLowerCase = e.title.toLowerCase() + " ";
+  e.searchTextLowerCase += e.year + " ";
 
-	// title
-	e.title = trimWhiteSpace( a[1] ) ;
+  if(a.hasOwnProperty('size'))
+  {
+    e.size = a.size;
+  }
 
-	//e.searchTextLowerCase += ' ' + e.title.toLowerCase() ;
-	
-	// date
-	var date  = a[0] ;
-	var dateRange = date.split("-") ; // maybe it's a range
-	//console.log(dateRange) ;
-		
-	// split date into YY.MM.D (if done)
-	dateRange[0] = dateRange[0].split(".") ;
-	//dateRange[1] = dateRange[1].split(".") ;
-		// need to be conditional on it existing
-	
-	//console.log(dateRange[0]) ;		
-		
-	e.year = dateRange[0][0] ;
-		
-	//e.searchTextLowerCase += ' ' + e.year ;
+  for(var i = 0; i < a.tags.length; i++)
+  {
+		e.searchTextLowerCase += a.tags[i].toLowerCase() + " ";
+    e.tag[a.tags[i]] = 1;
+  }
 
-	
+  for( attribute in customAttrs)
+  {
+    if(a.hasOwnProperty(attribute))
+    {
+      if(isUndef(e[attribute])) e[attribute] = {};
+      e[attribute][a.attribute] = 1;
+    }
+  }
+
 	// return
 	return e ;
 }
@@ -727,13 +677,11 @@ function filterEventByFindWordFunc( value )
 
 function applyFilterToEventsView( filterEventFunc )
 {
-	value = trimWhiteSpace(value) ;
 	
 	var nMatches = 0 ;
 	var noQuery = filterEventFunc===null ; //(value==="") ;
 	//console.log( value + ', ' + !noQuery )
 	
-	value = value.toLowerCase() ;
 	
 	eventViews.map( function(eview) {
 	
