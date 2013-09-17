@@ -117,14 +117,15 @@ var eventTagX;
 
 var eventTagF =
 {
-	'MIT'			: colorDotF('red'),
-	'game'			: colorDotF('blue'),
-	'play'			: colorDotF('CCACE0'),
-	'computer'		: colorDotF('green'),
-	'academic-text' : colorDotF('orange'),
-	'popular-text'  : colorDotF('yellow'),
-	'film'			: colorDotF('orange'),
-	'exhibit'		: colorDotF('yellow')		
+	'conference'	    : colorDotF('red'),
+	'game'			      : colorDotF('blue'),
+	'development'		  : colorDotF('CCACE0'),
+	'paper'		        : colorDotF('green'),
+	'presentation'    : colorDotF('orange'),
+	'team-member'     : colorDotF('yellow'),
+	'concept'			    : colorDotF('orange'),
+	'version'		      : colorDotF('yellow'),
+	'academic-quarter': colorDotF('pink')		
 } ;
 	
 /*
@@ -133,9 +134,6 @@ bright 2 http://www.colourlovers.com/palette/2528096/Precipitate_in_love%E2%9C%B
 dark but bold http://www.colourlovers.com/palette/444399/Man_on_the_subway
 subdued http://www.colourlovers.com/palette/2404814/timeline
 */
-
-
-
 
 	/*
 	 *	Globals
@@ -147,7 +145,7 @@ var eventsByYear  ;
 
 var eventViews = [] ;
 
-var yearThickness=[yearEnd]; // array of [yearStart] ... [yearEnd] with rightmost pixel edge
+var yearThickness=[]; // array of [yearStart] ... [yearEnd] with rightmost pixel edge
 
 var rollover ;
 var selection ;
@@ -224,7 +222,7 @@ function main()
 
 
 	// initialize year thickness
-	for( var i=yearStart; i<yearEnd; ++i ) yearThickness[i]=0 ;
+	for( var i=yearStart; i<=yearEnd; ++i ) yearThickness[i]=0 ;
 
 
 	// setup layers
@@ -759,7 +757,7 @@ function sortEventsOfYear(a,b)
 	{
 		var x = 0 ;
 		
-		applyTag( eventTagX, e, function(tagx)
+	applyTag( eventTagX, e, function(tagx)
 		{
 			x = tagx ;
 		}) ;
@@ -825,12 +823,17 @@ function addEventToView( event )
 	applyTag( eventTagX, event,
 		function( tagx )
 		{
+      console.log(tagx);
 			x = tagx ;
 		}) ;
 	
+  console.log("post function x: " + x);
+  console.log("year thickness: "+yearThickness);
 	x = Math.max( x, yearThickness[event.year] ) ;
 	
 	x = Math.min( x, view.size.width-30 ) ; // display horiz. overload as glitch
+
+  console.log("post min/max x: "+x);
 	
 	var loc = new Point( x, yearToPx(event.year)) ;
 
@@ -840,6 +843,11 @@ function addEventToView( event )
   } else if( event.month != 0)
   {
     loc = new Point( x, monthToPx(event.year, event.month));
+  }
+
+  if(event.year === '2013')
+  {
+    console.log(loc);
   }
 	
 	var dot = new Path.Circle( loc, r ) ;

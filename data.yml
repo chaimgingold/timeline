@@ -12,15 +12,14 @@ settings:
 # Sizes
 eventTagX:
   game : 600
-  play : 600
-  software : 600
-  language : 600
-  computer : 350
-  academic-text : 800
-  popular-text : 800
-  exhibit : 800
-  chip : 800
-  film : 820
+  development: 600
+  paper: 600
+  presentation: 600
+  conference: 600
+  team-member: 600
+  concept : 600
+  version: 600
+  academic-quarter: 300
 
 # Index of custom attributes
 customAttributes:
@@ -28,30 +27,172 @@ customAttributes:
   - author
   - in
 
-
 #Event Listing
 events:
   -
+    title:   Start Winter Quarter 2010
+    date:   2010.1.5
+    tags:   [academic-quarter]
+  -
+    title:   End Winter Quarter 2010
+    date:   2010.3.19
+    tags:   [academic-quarter]
+  -
     title: GDC 2010
     date : 2010.3.9-2010.3.13
-    tags: [game]
+    tags: [conference]
+  -
+    title:   "AI and Interactive Storytelling: How We Can Help Each Other"
+    date:   2010.3.9
+    tags:   [presentation, conference]
+    description: Michael Mateas talk at AI Summit, GDC 2010
   -
     title: Start Fall Quarter 2009
     date : 2009.9.24
-    tags: [game, popular-text]
+    tags: [academic-quarter]
   -
     title: End Fall Quarter 2009
     date : 2009.12.10
-    tags: [popular-text]
-  -
-    title: FDG 2010
-    date : 2010.6.18-2010.6.21
-    tags: [academic-text, engelbart]
+    tags: [academic-quarter]
   -
     title: Start Spring Quarter 2010
     date : 2010.3.29
-    tags: [academic-text, game]
+    tags: [academic-quarter]
   -
     title: End Spring Quarter 2010
-    date: 2010.6.10
-    tags: [academic-text, game]
+    date : 2010.6.10
+    tags: [academic-quarter]
+  -
+    title: FDG 2010
+    date : 2010.6.18-2010.6.21
+    tags: [conference]
+  -
+    title: Start Fall Quarter 2010
+    date : 2010.9.23
+    tags: [academic-quarter]
+  -
+    title: End Fall Quarter 2010
+    date : 2010.12.9
+    tags: [academic-quarter]
+  -
+    title:   Start Winter Quarter 2011
+    date:   2011.1.4
+    tags:   [academic-quarter]
+  -
+    title:   End Winter Quarter 2011
+    date:   2011.3.18
+    tags:   [academic-quarter]
+  -
+    title:   GDC 2011
+    date:   2011.2.28-2011.3.4
+    tags:   [conference]
+    description: Game Developer's Conference 2011, San Francisco
+  -
+    title:   "Experimental Game AI: Live Demos of Innovation"
+    date:   2011.2.28
+    tags:   [presentation, conference]
+    description: Michael Mateas talk at AI Summit, GDC 2011
+  -
+    title:   Start Spring Quarter 2011
+    date:   2011.3.28
+    tags:   [academic-quarter]
+  -
+    title:   End Spring Quarter 2011
+    date:   2011.6.9
+    tags:   [academic-quarter]
+  -
+    title:   FDG 2011
+    date:   2011.6.28-2011.7.1
+    tags:   [conference]
+    description: Foundations of Digital Games Conference 2011
+  -
+    title:   Start Fall Quarter 2011
+    date:   2011.9.22
+    tags:   [academic-quarter]
+  -
+    title:   End Fall Quarter 2011
+    date:   2011.12.8
+    tags:   [academic-quarter]
+  -
+    title:   Start Winter Quarter 2012
+    date:   2012.1.9
+    tags:   [academic-quarter]
+  -
+    title:   End Winter Quarter 2012
+    date:   2012.3.22
+    tags:   [academic-quarter]
+  -
+    title:   GDC 2012
+    date:   2012.3.5-2012.3.9
+    tags:   [conference]
+    description: Game Developer's Conference 2012
+  -
+    title:   "What is a Research Game?"
+    date:   2012.3.5
+    tags:   [presentation]
+    description: Michael Mateas talk at AI Summit, GDC 2012
+  -
+    title:   "Game Educator's Rant"
+    date:   2012.3.5
+    tags:   [presentation]
+    description: Michael Mateas talk at Education Summit, GDC 2012
+  -
+    title:   Start Spring Quarter 2012
+    date:   2012.4.2
+    tags:   [academic-quarter]
+  -
+    title:   End Spring Quarter 2012
+    date:   2012.6.14
+    tags:   [academic-quarter]
+  -
+    title:   FDG 2012
+    date:   2012.5.29-2012.6.1
+    tags:   [conference]
+    description: Foundation of Digital Games Conference 2012
+  -
+    title:   Start Fall Quarter 2012
+    date:   2012.9.27
+    tags:   [academic-quarter]
+  -
+    title:   End Fall Quarter 2012
+    date:   2012.12.13
+    tags:   [academic-quarter]
+  -
+    title:   Start Winter Quarter 2013
+    date:   2013.1.7
+    tags:   [academic-quarter]
+  -
+    title:   End Winter Quarter 2013
+    date:   2013.3.22
+    tags:   [academic-quarter]
+  -
+    title:   GDC 2013
+    date:   2013.3.25-2013.3.29
+    tags:   [conference]
+    description: Game Developer's Conference 2013
+  -
+    title:   "Game Educator's Rant"
+    date:   2013.3.25
+    tags:   [presentation]
+    description: Michael Mateas talk at Education Summit, GDC 2013
+  -
+    title:   Start Spring Quarter 2013
+    date:   2013.4.1
+    tags:   [academic-quarter]
+  -
+    title:   End Spring Quarter 2013
+    date:   2013.6.13
+    tags:   [academic-quarter]
+  -
+    title:   FDG 2013
+    date:   2013.5.14-2013.5.17
+    tags:   [conference]
+    description: Foundation's of Digital Games Conference 2013
+  -
+    title:   Start of Fall Quarter 2013
+    date:   2013.9.26
+    tags:   [academic-quarter]
+  -
+    title:   End of Fall Quarter 2013
+    date:   2013.12.12
+    tags:   [academic-quarter]
