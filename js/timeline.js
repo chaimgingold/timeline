@@ -94,13 +94,14 @@ var yearEnd   = 2013 ;
 
 var yearToPxScale  = 300 ; //20 ; //17 ;
 var yearToPxStart  = 30 ;
+var binSizeInDays = 0; //defaults to year bins if set to 0
 var yearMajorLine = 1 ;
 var yearMinorLine = 1 ;
 var drawMonths = true;
 
 var itemHorizGutter = 60 ;
 var itemFirstX      = 75 ;
-
+var eventBins;
 var dataFileName= "data.yml";
 
 // orient time
@@ -224,6 +225,24 @@ function main()
 	// initialize year thickness
 	for( var i=yearStart; i<=yearEnd; ++i ) yearThickness[i]=0 ;
 
+
+  // initialize event bins
+  var arraySize;
+  if (binSizeInDays == 0)
+  {
+    arraySize = yearStart + (yearStart - yearEnd);
+  } else
+  {
+    var totalDays = (yearEnd - yearStart) * 365;
+    arraySize = totalDays / binSizeInDays;
+  }
+
+  eventBins = new Array(arraySize);
+
+  for (var i=0; i < arraySize; i++)
+  {
+    eventBins[i] = [];
+  }
 
 	// setup layers
 	layerYears  = new Layer() ;
@@ -777,6 +796,24 @@ function sortEventsOfYear(a,b)
 		else return 0 ;
 	}
 }
+
+function addEventToBin(event)
+{
+  var y, m, d, totalDays;
+  y = event.year - yearStart;
+  m = event.month;
+  d = event.day;
+
+  totalDays = year * 365 + m * 31 + d;
+
+  eventBins[Math.floor(totalDays / binSizeInDays)].push(event);
+}
+
+function findBin(event)
+{
+  var y = event.year - yearStart;
+  return eventBins[Math.floor(y * 365 + event.month * 31 + event.day);
+}
 	
 function colorDotF( color )
 {
@@ -815,25 +852,19 @@ function addEventToView( event )
 	
 	var r   = sizes[event.size] //3 ;
 	
-	
-	
 	// dot
 	var x = xPx ;
 
 	applyTag( eventTagX, event,
 		function( tagx )
 		{
-      console.log(tagx);
 			x = tagx ;
 		}) ;
 	
-  console.log("post function x: " + x);
-  console.log("year thickness: "+yearThickness);
 	x = Math.max( x, yearThickness[event.year] ) ;
 	
 	x = Math.min( x, view.size.width-30 ) ; // display horiz. overload as glitch
 
-  console.log("post min/max x: "+x);
 	
 	var loc = new Point( x, yearToPx(event.year)) ;
 
@@ -845,11 +876,6 @@ function addEventToView( event )
     loc = new Point( x, monthToPx(event.year, event.month));
   }
 
-  if(event.year === '2013')
-  {
-    console.log(loc);
-  }
-	
 	var dot = new Path.Circle( loc, r ) ;
 	dot.fillColor = new GrayColor( 0.7 ) ;
 	
