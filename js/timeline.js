@@ -94,12 +94,12 @@ var yearEnd   = 2013 ;
 
 var yearToPxScale  = 300 ; //20 ; //17 ;
 var yearToPxStart  = 30 ;
-var binSizeInDays = 0; //defaults to year bins if set to 0
+var binSizeInDays = 31; //defaults to year bins if set to 0
 var yearMajorLine = 1 ;
 var yearMinorLine = 1 ;
 var drawMonths = true;
 
-var itemHorizGutter = 60 ;
+var itemHorizGutter = 30 ;
 var itemFirstX      = 75 ;
 var eventBins;
 var dataFileName= "data.yml";
@@ -229,9 +229,10 @@ function main()
     binSizeInDays = 365;
   } else
   {
-    var totalDays = (yearEnd - yearStart) * 365;
-    numBins = totalDays / binSizeInDays;
+    var totalDays = (yearEnd - yearStart + 1) * 365;
+    numBins = Math.ceil(totalDays / binSizeInDays);
   }
+  console.log(numBins);
 
   eventBins = new Array(numBins);
 
@@ -912,7 +913,7 @@ function addEventToView( event )
 	
 	
 	//
-	binThickness[event.year] = text.bounds.right + itemHorizGutter ;
+	binThickness[findEventBinIndex(event)] = text.bounds.right + itemHorizGutter ;
 	//}
 
 
