@@ -11,15 +11,15 @@ settings:
 # Event Rendering Information
 # Sizes
 eventTagX:
-  game : 600
-  development: 600
+  game : 0
+  development: 300
   paper: 600
-  presentation: 600
-  conference: 600
-  team-member: 600
-  concept : 600
-  version: 600
-  academic-quarter: 300
+  presentation: 900
+  conference: 1200
+  team-member: 1500
+  concept : 1800
+  version: 2100
+  academic-quarter: 2400
 
 # Index of custom attributes
 customAttributes:

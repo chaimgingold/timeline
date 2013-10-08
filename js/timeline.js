@@ -146,7 +146,7 @@ var eventsByYear  ;
 
 var eventViews = [] ;
 
-var yearThickness=[]; // array of [yearStart] ... [yearEnd] with rightmost pixel edge
+var binThickness = []; // array of bins with rightmost pixel edge
 
 var rollover ;
 var selection ;
@@ -168,12 +168,12 @@ var customAttrs;
 	 
 function cEvent()
 {
-	this.tag	=	 {} ;
-	this.title	=	 '' ;
-	this.year	=	 0;
-  this.month = 0;
-  this.day = 0;
-	this.size   =	 2 ;
+	this.tag	  = {} ;
+	this.title	= '' ;
+	this.year	  = 0;
+  this.month  = 0;
+  this.day    = 0;
+	this.size   = 2 ;
 
 	this.searchTextLowerCase =	 '' ;
 
@@ -221,28 +221,35 @@ function main()
 		doQuery( $('#query').val() ) ;
 	}
 
-
-	// initialize year thickness
-	for( var i=yearStart; i<=yearEnd; ++i ) yearThickness[i]=0 ;
-
-
   // initialize event bins
-  var arraySize;
+  var numBins;
   if (binSizeInDays == 0)
   {
-    arraySize = yearStart + (yearStart - yearEnd);
+    numBins = yearEnd - yearStart + 1;
+    binSizeInDays = 365;
   } else
   {
     var totalDays = (yearEnd - yearStart) * 365;
-    arraySize = totalDays / binSizeInDays;
+    numBins = totalDays / binSizeInDays;
   }
 
-  eventBins = new Array(arraySize);
+  eventBins = new Array(numBins);
 
-  for (var i=0; i < arraySize; i++)
+  for (var i=0; i < numBins; i++)
   {
     eventBins[i] = [];
   }
+
+  //initialize thickness for bins
+  //'thickness' keep track of the current x coordinate position
+  //for an event, ensuring no overlap
+  binThickness = new Array(numBins);
+
+  for(var i=0; i < numBins; i++)
+  {
+    binThickness[i] = 0;
+  }
+
 
 	// setup layers
 	layerYears  = new Layer() ;
@@ -288,22 +295,24 @@ function convertDataFileToEvents(dataFile)
 	// parse yaml data 
 	eventsAsArray = currentYamlData.events;
 	eventsAll     = parseEventsFromArray(eventsAsArray) ;
-	eventsByYear  = getEventsByYear(eventsAll) ;
+  eventsByBin   = getEventsByBin(eventsAll);
+
+  console.log("eventsByBin: "+eventsByBin);
 
   eventTagX = currentYamlData.eventTagX;
   customAttrs = currentYamlData.customAttributes;
 
-	// sort events by year
-	eventsByYear.map( function( oneYear )
-	{
-		oneYear.sort( sortEventsOfYear ) ;
-	}) ;
+  //sort events by bin
+  eventsByBin.map( function( oneBin )
+  {
+    oneBin.sort( sortEventsInBin );
+  });
 
-	// add all events to map
-	eventsByYear.map( function( oneYear )
-	{
-		oneYear.map( addEventToView ) ; // populate eventViews
-	}) ;
+  //add all events to display
+  eventsByBin.map( function( oneBin )
+  {
+    oneBin.map( addEventToView ) ; // populate eventViews
+  });
 
 	// load params from URL (eg default query specified)
   //
@@ -505,7 +514,7 @@ function trimWhiteSpace (str) {
 
 function yearToPx( year )
 {
-	var off ;
+	var off;
 	
 	if (isTimeForwardUp) off = yearEnd - year ;
 	else				 off = (year-yearStart) ;
@@ -539,20 +548,34 @@ function dayToPx( year, month, day)
 // Munging input data
 //
 
-function getEventsByYear( a )
+function getEventsByBin( a )
 {
-	var byy = [] ;
-	
-	a.map( function(e)
-	{
-		var y = e.year ;
-		
-		if ( isUndef(byy[y]) ) byy[y] = [] ;
-		
-		byy[y].push(e) ;
-	}) ;
-	
-	return byy ;
+  var bins = [];
+
+  a.map( function(e)
+  {
+    var binIndex = findEventBinIndex(e);
+    console.log("Event: "+e+"Event Year: "+e.year+" bin index: "+binIndex);
+    if( isUndef(bins[binIndex]) ) bins[binIndex] = [];
+    bins[binIndex].push(e) ; 
+  });
+
+  return bins;
+}
+
+function findEventBinIndex(event)
+{
+  var y, m, d, totalDays;
+
+  y = parseInt(event.year) - yearStart;
+  m = parseInt(event.month);
+  d = parseInt(event.day);
+
+  if(m > 0) m -= 1;
+
+  totalDays = y * 365 + m * 31 + d;
+
+  return Math.floor(totalDays / binSizeInDays);
 }
 
 
@@ -770,7 +793,7 @@ function applyFilterToEventsView( filterEventFunc )
 // Drawing/Layout
 //
 
-function sortEventsOfYear(a,b)
+function sortEventsInBin(a, b)
 {
 	function getx(e)
 	{
@@ -795,25 +818,9 @@ function sortEventsOfYear(a,b)
 		else if ( a.size > b.size ) return -1 ;
 		else return 0 ;
 	}
+
 }
 
-function addEventToBin(event)
-{
-  var y, m, d, totalDays;
-  y = event.year - yearStart;
-  m = event.month;
-  d = event.day;
-
-  totalDays = year * 365 + m * 31 + d;
-
-  eventBins[Math.floor(totalDays / binSizeInDays)].push(event);
-}
-
-function findBin(event)
-{
-  var y = event.year - yearStart;
-  return eventBins[Math.floor(y * 365 + event.month * 31 + event.day);
-}
 	
 function colorDotF( color )
 {
@@ -836,7 +843,6 @@ function addEventToView( event )
 	var xPx = itemFirstX ;
 
 	//var event = events[i] ;
-
 	// year out of bounds?
 	if (event.year<yearStart) return ;
 	if (event.year>yearEnd  ) return ;
@@ -861,10 +867,11 @@ function addEventToView( event )
 			x = tagx ;
 		}) ;
 	
-	x = Math.max( x, yearThickness[event.year] ) ;
+	x = Math.max( x, binThickness[findEventBinIndex(event)] ) ;
 	
 	x = Math.min( x, view.size.width-30 ) ; // display horiz. overload as glitch
 
+  console.log(x);
 	
 	var loc = new Point( x, yearToPx(event.year)) ;
 
@@ -905,7 +912,7 @@ function addEventToView( event )
 	
 	
 	//
-	yearThickness[event.year] = text.bounds.right + itemHorizGutter ;
+	binThickness[event.year] = text.bounds.right + itemHorizGutter ;
 	//}
 
 
