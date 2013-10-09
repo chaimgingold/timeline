@@ -89,7 +89,7 @@ TODO:
 	 *	Constants
 	 */
 
-var yearStart = 2009;
+var yearStart = 2008;
 var yearEnd   = 2013 ;
 
 var yearToPxScale  = 300 ; //20 ; //17 ;
@@ -614,6 +614,7 @@ function parseEvent( a )
   e.searchTextLowerCase += e.year + " ";
   if(e.month > 0) e.searchTextLowerCase += e.month + " ";
   if(e.day > 0) e.searchTextLowerCase += e.day + " ";
+  if(!isUndef(a.description)) e.searchTextLowerCase += a.description.toLowerCase() + " ";
 
   if(a.hasOwnProperty('size'))
   {

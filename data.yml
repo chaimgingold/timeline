@@ -7,18 +7,20 @@ settings:
   itemHorizGutter : !!int 60
   itemFirstX : !!int 75
   isTimeForwardUp : !!bool true
+  yearStart: 2008
+  yearEnd: 2013
   
 # Event Rendering Information
 # Sizes
 eventTagX:
   game : 100
   development: 100
-  paper: 100 
+  paper: 100
   presentation: 100
   conference: 100
   team-member: 100
-  concept : 100 
-  version: 100 
+  concept : 100
+  version: 100
   academic-quarter: 100
 
 # Index of custom attributes
@@ -26,6 +28,8 @@ customAttributes:
   - by
   - author
   - in
+  - at
+  - description
 
 #Event Listing
 events:
@@ -196,3 +200,188 @@ events:
     title:   End of Fall Quarter 2013
     date:   2013.12.12
     tags:   [academic-quarter]
+  -
+    title:   DAC 2009
+    date:   2009.12.12-2009.12.15
+    tags:   [conference]
+    description: Eighth Digital Art and Culture Conference
+  -
+    title:   AAAI Spring Symposium 2009
+    date:   2009.3.23-2009.3.25
+    tags:   [conference]
+    description: Association for the Advancement of Artificial Intelligence Spring Symposium, Intelligent Narrative Technologies II
+  -
+    title:   "Comme il Faut: A System..."
+    date:   2009.12.12
+    tags:   [paper, presentation]
+    description: Comme il Faut, A System for Simulating Social Games Between Autonomous Characters
+    by: McCoy, Joshua; Mateas, Michael; Wardrip-Fruin, Noah
+    at: DAC 2009
+  -
+    title:   "The Computation of Self in Everyday Life..."
+    date:   2009.3.23
+    tags:   [paper, presentation]
+    description: The Computation of Self in Everyday Life, A Dramaturgical Approach for Socially Competent Agents
+    by: McCoy, Joshua; Mateas, Michael
+    at: AAAI Spring Symposium 2009
+  -
+    title:   AIIDE 2010
+    date:   2010.10.10-2010.10.13
+    tags:   [conference]
+    description: Seventh Annual Conference on Artificial Intelligence and Interactive Digital Entertainment
+  -
+    title:   AIIDE 2011
+    date:   2011.10.11-2011.10.14
+    tags:   [conference]
+    description: Eighth Annual Conference on Artificial Intelligence and Interactive Digital Entertainment
+  -
+    title:   AIIDE 2012
+    date:   2011.10.8-2011.10.12
+    tags:   [conference]
+    description: Ninth Annual Conference on Artificial Intelligence and Interactive Digital Entertainment
+  -
+    title:   Aaron Reed
+    date:   2010.9.15
+    tags:   [team-member]
+    description: Aaron Reed joins project for narrative authoring
+  -
+    title:   Duncan Bowsman
+    date:   2010.9.15
+    tags:   [team-member]
+    description: Duncan Bowsman joins project for narrative authoring
+  -
+    title:   Alexei Othenin-Girard
+    date:   2010.9.15
+    tags:   [team-member]
+    description: Alexei joins project for narrative authoring
+  -
+    title:   Undergraduate Writing Team Formed
+    date:   2011.3.28
+    tags:   [development]
+    description: Undergraduate writing team for content creation, Zane Mariano
+  -
+    title:   Ben Samuel Organizing Writing Team
+    date:   2011.3.28
+    tags:   [development]
+    description: Ben provides syllabus and guidance for writing team
+  -
+    title:   Paper Prototype Developed
+    date:   2009.10.1-2009.11.25
+    tags:   [version, development]
+    description: Computationally assisted paper prototype for alt prom playlist
+  -
+    title:   Josh Overhaul CiF (Ben) (?)
+    date:   2009.12.10-2010.1.5
+    tags:   [development]
+    description: Modifications to CiF over winter break
+  -
+    title:   Paper Prototype Playtest (?)
+    date:   2010.11.20
+    tags:   [development]
+    description: Prototype playtested before Thanksgiving 2010
+  -
+    title:   Ben Samuel
+    date:   2009.9.24
+    tags:   [team-member]
+    description: Ben Samuel joins development team
+  -
+    title:   Teale Fristoe
+    date:   2009.9.24
+    tags:   [team-member]
+    description: Teale Fristoe joins development team
+  -
+    title:   Brandon Tearse
+    date:   2009.9.24
+    tags:   [team-member]
+    description: Brandon Tearse joins development team
+  -
+    title:   Michael Treanor
+    date:   2009.9.24
+    tags:   [team-member]
+    description: Michael Treanor joins development team
+  -
+    title:   CMPS 148/248 Winter 2010
+    date:   2010.1.5-2010.3.19
+    tags:   []
+    description: Ben Samuel TAs Interactive Narrative 
+    by: Michael Mateas (?)
+  -
+    title:   Teale Leaves
+    date:   2010.1.5
+    tags:   [team-member]
+    description: Teale Fristoe leaves project
+  -
+    title:   Project Codenamed "Promocalypse" (?)
+    date:   2009.12.15
+    tags:   [development, concept]
+
+  -
+    title:   Scala CiF
+    date:   2010.1.5-2010.3.9
+    tags:   [development]
+    description: Brandon develops Scala based Comme il Faut AI System
+  -
+    title:   GDC 2010 Demo Crunch
+    date:   2010.3.1-2010.3.9
+    tags:   [development]
+    description: Development crunch for Promocalypse demo at GDC 2010
+  -
+    title:   UWT Works Through Summer
+    date:   2011.6.9-2011.9.22
+    tags:   [development]
+    description: SCRUM for writing team and authoring contributions
+  -
+    title:   Undergraduate Writing Team Ends
+    date:   2011.9.22
+    tags:   [development]
+    description: Coursework eats writing team
+  -
+    title:   Demo for Arash Keshmirian, Serban Porumbescu LIMBIC Software (?)
+    date:   2011.10.5
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Demo for Mirjam Eladhari
+    date:   2011.10.19
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Demo for Alex Neuse, Mike Roush, Gaijin Games
+    date:   2011.10.26
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Demo for Ozlem Kalini, Sony
+    date:   2011.11.2
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Demo for Nic Duchenaut, PARC
+    date:   2011.11.9
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Demo for Clint Hocking, LucasArts
+    date:   2011.11.16
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Demo for Richard Lemarchand, Naughty Dog
+    date:   2011.11.23
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Demo for Borut Pfeifer, Haunted Temple Studios
+    date:   2011.11.30
+    tags:   [presentation]
+    description: IFOG Speaker Series
+  -
+    title:   Aaron Rewrites NLG Subject-Object System (?)
+    date:   2011.11.15
+    tags:   [development, concept]
+    description: Modification of Natural Language Templates to account for complex pronoun arrangements
+  -
+    title:   Prom Week Release
+    date:   2012.2.14
+    tags:   [version, development]
+    description: Game released on Valentine's Day to Facebook and Kongregate
