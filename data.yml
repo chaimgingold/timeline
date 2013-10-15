@@ -258,7 +258,7 @@ events:
     title:   Undergraduate Writing Team Formed
     date:   2011.3.28
     tags:   [development]
-    description: Undergraduate writing team for content creation, Zane Mariano
+    description: Undergraduate writing team for content creation, Zane Mariano, Cory Demacellia
   -
     title:   Ben Samuel Organizing Writing Team
     date:   2011.3.28
@@ -276,7 +276,7 @@ events:
     description: Modifications to CiF over winter break
   -
     title:   Paper Prototype Playtest (?)
-    date:   2010.11.20
+    date:   2009.11.20
     tags:   [development]
     description: Prototype playtested before Thanksgiving 2010
   -
@@ -312,7 +312,7 @@ events:
     description: Teale Fristoe leaves project
   -
     title:   Project Codenamed "Promocalypse" (?)
-    date:   2009.12.15
+    date:   2009.9.15
     tags:   [development, concept]
 
   -
@@ -385,3 +385,254 @@ events:
     date:   2012.2.14
     tags:   [version, development]
     description: Game released on Valentine's Day to Facebook and Kongregate
+  -
+    title:   E3 Demo
+    date:   2012.6.5-2012.6.7
+    tags:   [conference]
+    description: Shown at IndieCade booth
+    at: Electronic Entertainment Expo, E3 2012
+  -
+    title:   IndieCade 2012
+    date:   2012.10.4-2012.10.7
+    tags:   [conference]
+    description: International Festival of Independent Games 
+  -
+    title:   Mike working on Launchpad Project
+    date:   2009.9.1
+    tags:   [game, development]
+    description: LaunchPad 2D rhythym platformer
+  -
+    title:   Demo for Henry Lowood
+    date:   2010.2.18
+    tags:   [presentation]
+    description: Demo after 'Players are Artists, Too' talk
+  -
+    title:   Switch to Externalized Social Focus 
+    date:   2009.12.1
+    tags:   [development]
+    description: Move towards less internalized agent representation after paper prototype playtest
+  -
+    title:   Move to Puzzle Type Gameplay
+    date:   2010.4.1
+    tags:   [development]
+    description: Settle on basic gameplay in form of social relations puzzles
+  -
+    title:   Undergraduate Developers Join Team
+    date:   2010.3.29
+    tags:   [development, team-member]
+    description: Devin Whilan, Ryan Andonian join team
+  -
+    title:   Beginning use of Flex SDK
+    date:   2010.3.29
+    tags:   [development]
+    description: Initial tests of Flex SDK for authoring / design tool
+  -
+    title:   Mike hired for Summer 2010
+    date:   2010.6.20-2010.9.22
+    tags:   [development]
+  -
+    title:   Artist Hired
+    date:   2010.3.29
+    tags:   [development, team-member]
+    description: ??? hired to do contract artwork
+  -
+    title:   Josh working on Holodeck Project
+    date:   2010.7.15
+    tags:   [development]
+  -
+    title:   Social Facts Database Fixed
+    date:   2010.9.15
+    tags:   [development]
+    description: Ben and Mike work on SFDB
+  -
+    title:   Time-ordered Rules Added to SFDB
+    date:   2010.9.15
+    tags:   [development]
+    description: Ben and Mike Fall 2010 work
+  -
+    title:   IGF 2012 Submission
+    date:   2011.10.17
+    tags:   [development, version]
+    description: Independent Games Festival 2012 Submission Deadline
+  -
+    title:   Sharing of IGF Build with Close Friends
+    date:   2011.9.15-2012.2.14
+    tags:   [development]
+    description: Beta Access for certain interested designers and friends
+  -
+    title:   Prom Week Accepted for IndieCade 2012
+    date:   2012.6.1
+    tags:   [development]
+  -
+    title:   User Interface Consultant Hired
+    date:   2012.8.1
+    tags:   [development, team-member]
+    description: External consultant hired for UI redesign
+  -
+    title:   User Interface Revamp
+    date:   2012.9.1-2012.10.4
+    tags:   [development]
+    description: Ben and Mike crunch on thought bubble UI
+  -
+    title:   iPad Development
+    date:   2012.11.1-2013.10.15
+    tags:   [development, version]
+    description: Ben works through 2013 on iPad Version
+  -
+    title:   Ben takes CMPS 201 Algorithms Class
+    date:   2010.3.29-2010.6.10
+    tags:   []
+  -
+    title:   Ben takes CMPS 290J Playable Media
+    date:   2010.3.29-2010.6.10
+    tags:   []
+    description: Noah Wardrip-Fruin teachs narrative based readings Class
+  -
+    title:   Woodstock's Thursday Party Meetings
+    date:   2010.9.23-2010.12.9
+    tags:   [development]
+    description: Meet at Woodstock's Pizza to brainstorm during Fall 2010
+  -
+    title:   Design Tool Developed by Undergraduate Team
+    date:   2010.3.29-2010.9.22
+    tags:   [development]
+    description: Authoring tool developed in Flex SDK
+  -
+    title:   Ben heads to Los Angeles
+    date:   2010.6.10-2010.9.1
+    tags:   []
+    description: Ben moves back to LA for Summer 2010
+  -
+    title:   Micro-theories Implemented
+    date:   2010.6.15-2010.9.22
+    tags:   [development]
+    description: Social games abstracted with micro-theories to ease authoring burden
+  -
+    title:   Iconographic UI Code Written
+    date:   2010.6.10-2010.9.22
+    tags:   [development]
+    description: Character iconographic thoughts written but not used
+  -
+    title:   Silicon Valley IGDA Game Technology and Career Night
+    date:   2011.3.16
+    tags:   [development, presentation]
+    at: Google Campus
+  -
+    title:   New Characters Introduced
+    date:   2010.9.1
+    tags:   [development]
+    description: New school cliques and archetypes Introduced
+  -
+    title:   Noah talk at Sarah Lawrence College
+    date:   2011.4.26
+    tags:   [presentation]
+    description: Noah gives talk and inspires Garen Kessler to volunteer for Prom Week
+  -
+    title:   Development of Mega UI
+    date:   2010.9.30-2011.3.18
+    tags:   [development]
+    description: Verbose UI developed to give players more social state information
+  -
+    title:   Lauren Scott and Garen Kessler on Team 
+    date:   2011.6.11-2011.9.21
+    tags:   [development, team-member]
+  -
+    title:   SCRUM Meetings with Undergraduates Summer 2011
+    date:   2011.6.11-2011.9.21
+    tags:   [development]
+    description: Ben SCRUM master
+  -
+    title:   "Emotions, Social Physics and PROM WEEK"
+    date:   2011.6.24
+    tags:   [presentation]
+    description: Presentation by Mike and Josh
+    at: Paris Game/AI Conference
+  -
+    title:   Paris Game/AI Conference
+    date:   2011.6.23-2011.6.24
+    tags:   [conference]
+  -
+    title:   Ben Filming Batteground
+    date:   2011.9.1-2011.12.15
+    tags:   []
+    description: Ben leaves project to film television show
+  -
+    title:   Battleground Premieres on Hulu
+    date:   2012.2.14
+    tags:   []
+  -
+    title:   Prom Week Nominated for IGF 2012
+    date:   2012.1.1
+    tags:   [development]
+    description: Technical Excellence Nomination 
+  -
+    title:   IVA 2012
+    date:   2012.9.12-2012.9.14
+    tags:   [conference]
+    description: Intelligent Virtual Agents Conference 2012
+    at: Unviersity of California, Santa Cruz
+  -
+    title:   Gathering of Lifelike Agents
+    date:   2012.9.13
+    tags:   [presentation, conference]
+    at: IVA 2012
+  -
+    title:   Switch to Flash Builder 4 for iPad development
+    date:   2012.11.15
+    tags:   [development]
+  -
+    title:   Michael Mateas CMPS 200 Presentation
+    date:   2006.9.30
+    tags:   [presentation]
+    description: Josh McCoy first learns of Michael's Interactive Narrative Work
+  -
+    title:   Stigma Project
+    date:   2007.11.11
+    tags:   [game]
+    description: Social Stigma prototype developed by Josh
+  -
+    title:   Combined Social Model Project
+    date:   2009.6.15
+    tags:   [game]
+    description: Kristina Strong, James Skorupski, Josh McCoy proposed joint project
+  -
+    title:   Predicates and Weighted Rules
+    date:   2010.1.15
+    tags:   [development]
+    description: Rule based system for CiF, weighted rules
+  -
+    title:   Undergraduate Summer Research Symposium 2010
+    date:   2010.8.15
+    tags:   [conference]
+    description: Presentation of undergraduate Prom Week related work
+  -
+    title:   Skeletal Animation System Developed
+    date:   2010.8.1
+    tags:   [development]
+    description: Ryan Andonian creates skeletal animation framework in Flash CS4
+  -
+    title:   Modal Operators Added to Predicates
+    date:   2011.3.28-2011.6.10
+    tags:   [development]
+  -
+    title:   Josh McCoy Advancement Leave
+    date:   2011.9.22-2011.12.8
+    tags:   [development]
+    description: Josh advances and leaves project team for Fall 2011 quarter
+  -
+    title:   Mike Treanor Takes Production Lead
+    date:   2011.9.22-2011.12.8
+    tags:   [development]
+  -
+    title:   Demo of Paper Prototype for Richard Evans
+    date:   2009.12.4
+    tags:   [presentation]
+  -
+    title:   Noah Gets Burritos
+    date:   2012.2.13
+    tags:   [development]
+    description: Noah buys burritos for development crunch
+  -
+    title:   Sandia Labs Behavioral AI Proposal
+    date:   2007.6.6
+    tags:   []
